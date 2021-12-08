@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,ts,tsx,json,yaml,yml}'",
     "lint": "next lint && prettier --check '**/?(.)*.{md,css,scss,js,ts,tsx,json,yaml,yml}'"
