@@ -16,7 +16,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/.nvmrc') }}-${{ hashFiles('**/package-lock.json') }}
       - if: steps.node-cache.outputs.cache-hit != 'true'
-        run: npm install --no-optional --no-audit --no-fund --progress=false
+        run: npm install --no-audit --no-fund --progress=false
       - run: npm run lint
       - run: npm run build
       - uses: actions/upload-artifact@v2
