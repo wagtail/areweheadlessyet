@@ -55,8 +55,8 @@ const Home: NextPage = () => {
                             <span>headless</span> yet?
                         </h1>
                         <p className={styles.description}>
-                            👍 Yes! But there's plenty we could improve for
-                            Wagtail's developers
+                            👍 Yes! But there&apos;s plenty we could improve for
+                            Wagtail&apos;s developers
                         </p>
                     </div>
                 </div>
