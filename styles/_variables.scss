@@ -1,0 +1,52 @@
+$font--primary: 'Inter';
+
+$color--primary: #183153;
+$color--white: #ffffff;
+
+$breakpoints: (
+    'small' '(max-width: 599px)',
+    'medium' '(min-width: 600px)',
+    'large' '(min-width: 1023px)'
+);
+
+// Font sizes
+$base-font-size: 18px;
+
+$large-font-sizes: (
+    xxxxl: 100px,
+    xxxl: 68px,
+    xxl: 64px,
+    xl: 45px,
+    l: 38px,
+    m: 24px,
+    s: 20px,
+    xs: 15px,
+    xxs: 14px,
+    xxxs: 12px,
+);
+
+$medium-font-sizes: (
+    xxxxl: 70px,
+    xxxl: 65px,
+    xxl: 52px,
+    xl: 38px,
+    l: 28px,
+    m: 22px,
+    s: 20px,
+    xs: 15px,
+    xxs: 14px,
+    xxxs: 12px,
+);
+
+$small-font-sizes: (
+    xxxxl: 60px,
+    xxxl: 45px,
+    xxl: 32px,
+    xl: 28px,
+    l: 26px,
+    m: 20px,
+    s: 18px,
+    xs: 14px,
+    xxs: 13px,
+    xxxs: 12px,
+);

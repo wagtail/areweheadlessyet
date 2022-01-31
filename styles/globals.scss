@@ -1,0 +1,17 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font--primary;
+    background: $color--primary;
+    color: $color--white;
+}
+
+a {
+    color: #3beccd;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
