@@ -1,23 +1,65 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import styles from '../styles/Home.module.scss';
+import TopCTA from '../components/TopCTA';
+import BottomCTA from '../components/BottomCTA';
 
 const Home: NextPage = () => {
     return (
         <div className={styles.container}>
             <Head>
                 <title>Are we headless yet? | Wagtail</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/headless-logo.svg" />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-medium.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-regular.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-bold.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-black.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>Are we headless yet?</h1>
-
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.tsx</code>
-                </p>
+                <TopCTA />
+                <div className={styles.hero}>
+                    <span className={styles.headless_logo}>
+                        <Image
+                            src="/headless-logo.svg"
+                            alt="Headless Wagtail Logo"
+                            width={140}
+                            height={160}
+                        />
+                    </span>
+                    <div className={styles.hero_body}>
+                        <h1 className={styles.title}>
+                            Are we <br />
+                            <span>headless</span> yet?
+                        </h1>
+                        <p className={styles.description}>
+                            👍 Yes! But there's plenty we could improve for
+                            Wagtail's developers
+                        </p>
+                    </div>
+                </div>
 
                 <div className={styles.grid}>
                     <a href="https://nextjs.org/docs" className={styles.card}>
@@ -58,24 +100,33 @@ const Home: NextPage = () => {
                         </p>
                     </a>
                 </div>
+                <BottomCTA />
             </main>
 
             <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com/?utm_source=wagtail&utm_campaign=oss"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            width={72}
-                            height={16}
-                        />
-                    </span>
-                </a>
+                <div>
+                    <div>
+                        <span className={styles.copyright}>
+                            © Are we headless yet?
+                        </span>
+                        <span>Updated 2022</span>
+                    </div>
+                    <span className={styles.delimiter}>-</span>
+                    <div>
+                        <Link href="https://wagtail.org/">
+                            <a className={styles.link}>Wagtail</a>
+                        </Link>{' '}
+                        is an open source project
+                    </div>
+                </div>
+                <span className={styles.footer_logo}>
+                    <Image
+                        src="/headless-logo.svg"
+                        alt="Headless Wagtail Logo"
+                        width={127}
+                        height={133}
+                    />
+                </span>
             </footer>
         </div>
     );
