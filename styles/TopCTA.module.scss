@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+
+    @include media-query(large) {
+        right: 0;
+    }
+}
+
+.cta {
+    display: flex;
+    margin-left: 0.5rem;
+    line-height: 1.2;
+    font-weight: 900;
+
+    @include media-query(large) {
+        flex-direction: column;
+    }
+}
+
+.link {
+    margin: 0 3px;
+
+    @include media-query(large) {
+        margin: 0;
+    }
+}
