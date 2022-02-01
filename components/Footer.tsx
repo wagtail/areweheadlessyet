@@ -3,7 +3,7 @@ import styles from '../styles/Footer.module.scss';
 
 export const Footer = () => (
     <footer className={styles.footer}>
-        <div>
+        <div className={styles.footer__text}>
             <div>
                 <span className={styles.copyright}>© Are we headless yet?</span>
                 <span>Updated 2022</span>
