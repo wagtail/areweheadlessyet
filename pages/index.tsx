@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import TopCTA from '../components/TopCTA';
 import BottomCTA from '../components/BottomCTA';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
     return (
@@ -48,7 +49,7 @@ const Home: NextPage = () => {
                             height={160}
                         />
                     </div>
-                    <div className={styles.hero_body}>
+                    <div className={styles.hero__body}>
                         <h1 className={styles.title}>
                             Are we <br />
                             <span>headless</span> yet?
@@ -100,33 +101,8 @@ const Home: NextPage = () => {
                     </a>
                 </div>
                 <BottomCTA />
+                <Footer />
             </main>
-
-            <footer className={styles.footer}>
-                <div>
-                    <div>
-                        <span className={styles.copyright}>
-                            © Are we headless yet?
-                        </span>
-                        <span>Updated 2022</span>
-                    </div>
-                    <span className={styles.delimiter}>-</span>
-                    <div>
-                        <a href="https://wagtail.org/" className={styles.link}>
-                            Wagtail
-                        </a>
-                        is an open source project
-                    </div>
-                </div>
-                <div className={styles.footer_logo}>
-                    <Image
-                        src="/images/headless-logo.svg"
-                        alt="Headless Wagtail Logo"
-                        width={127}
-                        height={133}
-                    />
-                </div>
-            </footer>
         </div>
     );
 };
