@@ -11,6 +11,7 @@
 
 .cta {
     display: flex;
+    flex-direction: row;
     margin-left: 0.5rem;
     line-height: 1.2;
     font-weight: $weight--extrabold;
