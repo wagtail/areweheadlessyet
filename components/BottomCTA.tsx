@@ -4,12 +4,7 @@ import styles from '../styles/BottomCTA.module.scss';
 export const BottomCTA = () => (
     <div className={styles.container}>
         <div>
-            <Image
-                src="/images/hear.png"
-                alt=""
-                width={32}
-                height={24}
-            />
+            <Image src="/images/hear.png" alt="" width={32} height={24} />
         </div>
         <div>
             <div className={styles.cta__text}>Hear the latest news...</div>
