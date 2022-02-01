@@ -16,9 +16,7 @@ export const BottomCTA = () => (
             <div className={styles.cta_text}>Hear the latest news...</div>
             <div className={styles.cta}>
                 <span>Join </span>
-                <Link href="https://wagtail.io/slack/">
-                    <a className={styles.link}>#headless</a>
-                </Link>
+                    <a href="https://wagtail.io/slack/" className={styles.link}>#headless</a>
                 <span> on Slack</span>
             </div>
         </div>
