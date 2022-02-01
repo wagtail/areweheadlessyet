@@ -6,7 +6,7 @@ export const BottomCTA = () => (
         <div>
             <Image
                 src="/images/hear-icon.svg"
-                alt="Hear the latest news"
+                alt=""
                 width={32}
                 height={24}
             />
