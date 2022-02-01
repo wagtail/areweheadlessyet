@@ -6,7 +6,7 @@ export const BottomCTA = () => (
     <div className={styles.container}>
         <span>
             <Image
-                src="/hear-icon.svg"
+                src="/images/hear-icon.svg"
                 alt="Hear the latest news"
                 width={32}
                 height={24}

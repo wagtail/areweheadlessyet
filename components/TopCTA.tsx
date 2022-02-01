@@ -5,7 +5,7 @@ import styles from '../styles/TopCTA.module.scss';
 export const TopCTA = () => (
     <div className={styles.container}>
         <span>
-            <Image src="/cta-icon.svg" alt="CTA Icon" width={31} height={31} />
+            <Image src="/images/cta-icon.svg" alt="CTA Icon" width={31} height={31} />
         </span>
         <div className={styles.cta}>
             <span>Join</span>

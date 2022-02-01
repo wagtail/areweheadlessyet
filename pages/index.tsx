@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <Head>
                 <title>Are we headless yet? | Wagtail</title>
-                <link rel="icon" href="/headless-logo.svg" />
+                <link rel="icon" href="/images/headless-logo.svg" />
                 <link
                     rel="preload"
                     href="/fonts/inter/inter-medium.woff2"
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 <div className={styles.hero}>
                     <span className={styles.headless_logo}>
                         <Image
-                            src="/headless-logo.svg"
+                            src="/images/headless-logo.svg"
                             alt="Headless Wagtail Logo"
                             width={140}
                             height={160}
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
                 </div>
                 <span className={styles.footer_logo}>
                     <Image
-                        src="/headless-logo.svg"
+                        src="/images/headless-logo.svg"
                         alt="Headless Wagtail Logo"
                         width={127}
                         height={133}
