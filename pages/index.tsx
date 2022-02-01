@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <main className={styles.main}>
                 <TopCTA />
                 <div className={styles.hero}>
-                    <div className={styles.headless_logo}>
+                    <div className={styles.logo}>
                         <Image
                             src="/images/headless-logo.svg"
                             alt="Headless Wagtail Logo"

@@ -90,8 +90,8 @@
 }
 
 .logo {
-    height: 1em;
-    margin-left: 0.5rem;
+    align-self: flex-end;
+    margin-right: 1.5rem;
 }
 
 @media (max-width: 600px) {
@@ -99,11 +99,6 @@
         width: 100%;
         flex-direction: column;
     }
-}
-
-.headless_logo {
-    align-self: flex-end;
-    margin-right: 1.5rem;
 }
 
 .hero {
