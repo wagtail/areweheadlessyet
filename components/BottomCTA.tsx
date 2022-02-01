@@ -5,7 +5,7 @@ export const BottomCTA = () => (
     <div className={styles.container}>
         <div>
             <Image
-                src="/images/hear-icon.svg"
+                src="/images/hear.png"
                 alt=""
                 width={32}
                 height={24}
