@@ -41,14 +41,14 @@ const Home: NextPage = () => {
             <main className={styles.main}>
                 <TopCTA />
                 <div className={styles.hero}>
-                    <span className={styles.headless_logo}>
+                    <div className={styles.headless_logo}>
                         <Image
                             src="/images/headless-logo.svg"
                             alt="Headless Wagtail Logo"
                             width={140}
                             height={160}
                         />
-                    </span>
+                    </div>
                     <div className={styles.hero_body}>
                         <h1 className={styles.title}>
                             Are we <br />
@@ -119,14 +119,14 @@ const Home: NextPage = () => {
                         is an open source project
                     </div>
                 </div>
-                <span className={styles.footer_logo}>
+                <div className={styles.footer_logo}>
                     <Image
                         src="/images/headless-logo.svg"
                         alt="Headless Wagtail Logo"
                         width={127}
                         height={133}
                     />
-                </span>
+                </div>
             </footer>
         </div>
     );
