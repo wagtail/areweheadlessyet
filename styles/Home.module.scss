@@ -114,17 +114,17 @@
         display: flex;
         margin-bottom: 4rem;
     }
-}
 
-.hero__body {
-    position: relative;
-    top: -63px;
+    &__body {
+        position: relative;
+        top: -63px;
 
-    @include media-query(medium) {
-        top: -73px;
-    }
+        @include media-query(medium) {
+            top: -73px;
+        }
 
-    @include media-query(large) {
-        top: 0;
+        @include media-query(large) {
+            top: 0;
+        }
     }
 }
