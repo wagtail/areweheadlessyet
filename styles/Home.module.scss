@@ -29,7 +29,7 @@
     line-height: 1;
     @include font-size(xxxxl);
     letter-spacing: -1px;
-    font-weight: 900;
+    font-weight: $weight--extrabold;
 }
 
 .title > span {

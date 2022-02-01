@@ -14,7 +14,7 @@
         margin-right: 0.25rem;
 
         @include media-query(large) {
-            font-weight: bold;
+            font-weight: $weight--bold;
         }
     }
 

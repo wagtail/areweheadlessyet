@@ -13,7 +13,7 @@
     display: flex;
     margin-left: 0.5rem;
     line-height: 1.2;
-    font-weight: 900;
+    font-weight: $weight--extrabold;
 
     @include media-query(large) {
         flex-direction: column;
