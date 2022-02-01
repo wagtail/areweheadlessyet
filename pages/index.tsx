@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import TopCTA from '../components/TopCTA';
 import BottomCTA from '../components/BottomCTA';
@@ -113,9 +112,9 @@ const Home: NextPage = () => {
                     </div>
                     <span className={styles.delimiter}>-</span>
                     <div>
-                        <Link href="https://wagtail.org/">
-                            <a className={styles.link}>Wagtail</a>
-                        </Link>{' '}
+                        <a href="https://wagtail.org/" className={styles.link}>
+                            Wagtail
+                        </a>
                         is an open source project
                     </div>
                 </div>

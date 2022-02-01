@@ -4,12 +4,7 @@ import styles from '../styles/TopCTA.module.scss';
 export const TopCTA = () => (
     <div className={styles.container}>
         <div>
-            <Image
-                src="/images/slack-icon.svg"
-                alt=""
-                width={31}
-                height={31}
-            />
+            <Image src="/images/slack-icon.svg" alt="" width={31} height={31} />
         </div>
         <div className={styles.cta}>
             Join{' '}
