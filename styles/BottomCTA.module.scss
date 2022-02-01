@@ -2,8 +2,8 @@
     align-self: flex-start;
     display: flex;
     position: relative;
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin: 2rem 0;
+    padding: 2rem 0;
 
     @include media-query(large) {
         margin: 5rem 0 0 5rem;

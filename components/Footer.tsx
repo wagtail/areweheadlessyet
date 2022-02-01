@@ -12,7 +12,7 @@ export const Footer = () => (
             <div>
                 <a href="https://wagtail.org/" className={styles.link}>
                     Wagtail
-                </a>
+                </a>{' '}
                 is an open source project
             </div>
         </div>
