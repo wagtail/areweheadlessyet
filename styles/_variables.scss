@@ -3,11 +3,7 @@ $font--primary: 'Inter', Helvetica, Arial;
 $color--primary: #183153;
 $color--white: #ffffff;
 
-$breakpoints: (
-    'small' '(max-width: 599px)',
-    'medium' '(min-width: 600px)',
-    'large' '(min-width: 1023px)'
-);
+$breakpoints: ('medium' '(min-width: 600px)', 'large' '(min-width: 1023px)');
 
 // Font sizes
 $base-font-size: 18px;
