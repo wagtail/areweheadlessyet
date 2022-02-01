@@ -5,8 +5,8 @@ export const TopCTA = () => (
     <div className={styles.container}>
         <div>
             <Image
-                src="/images/cta-icon.svg"
-                alt="CTA Icon"
+                src="/images/slack-icon.svg"
+                alt=""
                 width={31}
                 height={31}
             />
