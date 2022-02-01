@@ -11,7 +11,8 @@ a {
     color: #3beccd;
     text-decoration: none;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: underline;
     }
 }

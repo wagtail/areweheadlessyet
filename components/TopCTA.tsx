@@ -1,18 +1,20 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/TopCTA.module.scss';
 
 export const TopCTA = () => (
     <div className={styles.container}>
-        <span>
-            <Image src="/images/cta-icon.svg" alt="CTA Icon" width={31} height={31} />
-        </span>
+        <Image
+            src="/images/cta-icon.svg"
+            alt="CTA Icon"
+            width={31}
+            height={31}
+        />
         <div className={styles.cta}>
-            <span>Join</span>
-            <Link href="https://wagtail.io/slack/">
-                <a className={styles.link}>#headless</a>
-            </Link>
-            <span>on Slack</span>
+            Join{' '}
+            <a href="https://wagtail.io/slack/" className={styles.link}>
+                #headless
+            </a>{' '}
+            on Slack
         </div>
     </div>
 );
