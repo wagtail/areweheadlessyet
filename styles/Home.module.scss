@@ -30,10 +30,10 @@
     @include font-size(xxxxl);
     letter-spacing: -1px;
     font-weight: $weight--extrabold;
-}
 
-.title > span {
-    color: #3beccd;
+    &__emphasis {
+        color: #3beccd;
+    }
 }
 
 .description {
