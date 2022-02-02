@@ -10,7 +10,7 @@ export const BottomCTA = () => (
             <div className={styles.cta__text}>Hear the latest news…</div>
             <div className={styles.cta}>
                 Join{' '}
-                <a href="https://wagtail.io/slack/" className={styles.link}>
+                <a href="https://github.com/wagtail/wagtail/wiki/Slack" className={styles.link}>
                     #headless
                 </a>{' '}
                 on Slack
