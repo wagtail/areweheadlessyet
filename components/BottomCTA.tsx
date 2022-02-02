@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../styles/BottomCTA.module.scss';
+import styles from './BottomCTA.module.scss';
 
 export const BottomCTA = () => (
     <div className={styles.container}>
