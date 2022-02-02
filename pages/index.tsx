@@ -14,12 +14,6 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/images/headless-logo.svg" />
                 <link
                     rel="preload"
-                    href="/fonts/inter/inter-medium.woff2"
-                    as="font"
-                    crossOrigin=""
-                />
-                <link
-                    rel="preload"
                     href="/fonts/inter/inter-regular.woff2"
                     as="font"
                     crossOrigin=""
