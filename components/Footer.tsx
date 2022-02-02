@@ -19,7 +19,7 @@ export const Footer = () => (
         <div className={styles.logo}>
             <Image
                 src="/images/headless-logo.svg"
-                alt="Headless Wagtail Logo"
+                alt=""
                 width={127}
                 height={133}
             />

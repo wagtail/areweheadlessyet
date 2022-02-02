@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                     <div className={styles.logo}>
                         <Image
                             src="/images/headless-logo.svg"
-                            alt="Headless Wagtail Logo"
+                            alt=""
                             width={140}
                             height={160}
                         />
