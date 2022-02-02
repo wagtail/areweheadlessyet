@@ -7,7 +7,7 @@ export const BottomCTA = () => (
             <Image src="/images/hear.png" alt="" width={32} height={24} />
         </div>
         <div>
-            <div className={styles.cta__text}>Hear the latest news...</div>
+            <div className={styles.cta__text}>Hear the latest news…</div>
             <div className={styles.cta}>
                 Join{' '}
                 <a href="https://wagtail.io/slack/" className={styles.link}>
