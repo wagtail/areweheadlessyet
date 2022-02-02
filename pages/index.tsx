@@ -52,9 +52,9 @@ const Home: NextPage = () => {
                     <div className={styles.hero__body}>
                         <h1 className={styles.title}>
                             Are we <br />
-                            <span className={styles.title__emphasis}>
+                            <strong className={styles.title__emphasis}>
                                 headless
-                            </span>{' '}
+                            </strong>{' '}
                             yet?
                         </h1>
                         <p className={styles.description}>
