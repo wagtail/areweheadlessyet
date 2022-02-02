@@ -1,14 +1,25 @@
+:root {
+    --color--white: #fff;
+    --color--lagoon: #3beccd;
+    --color--purple: #183153;
+
+    --color--text: var(--color--white);
+    --color--background: var(--color--purple);
+    --color--accent: var(--color--lagoon);
+    --color--link: var(--color--lagoon);
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: $font--primary;
-    background: $color--primary;
-    color: $color--white;
+    background: var(--color--background);
+    color: var(--color--text);
 }
 
 a {
-    color: #3beccd;
+    color: var(--color--link);
     text-decoration: none;
 
     &:hover,
