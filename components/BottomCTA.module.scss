@@ -4,10 +4,33 @@
     position: relative;
     margin: 2rem 0;
     padding: 2rem 0;
+    color: inherit;
 
     @include media-query(large) {
         margin: 5rem 0 0 5rem;
         padding: 2rem;
+    }
+
+    .cta {
+        font-size: 30px;
+        line-height: 1.15;
+        font-weight: $weight--extrabold;
+        display: flex;
+        flex-direction: column;
+
+        @include media-query(large) {
+            display: block;
+            line-height: 1.5;
+        }
+
+        &__tag {
+            color: var(--color--accent);
+            font-weight: inherit;
+        }
+
+        &__text {
+            @include font-size(m);
+        }
     }
 
     &:before {
@@ -25,30 +48,5 @@
             left: 0;
             width: 33%;
         }
-    }
-}
-
-.cta {
-    font-size: 30px;
-    line-height: 1.15;
-    font-weight: $weight--extrabold;
-    display: flex;
-    flex-direction: column;
-
-    @include media-query(large) {
-        display: block;
-        line-height: 1.5;
-    }
-
-    &__text {
-        @include font-size(m);
-    }
-}
-
-.link {
-    margin: 0 3px;
-
-    @include media-query(large) {
-        margin: 0;
     }
 }
