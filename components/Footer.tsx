@@ -5,7 +5,7 @@ export const Footer = () => (
     <footer className={styles.footer}>
         <div className={styles.footer__text}>
             <div>
-                <span className={styles.copyright}>© Are we headless yet?</span>
+                <strong className={styles.copyright}>© Are we headless yet?</strong>
                 <span>Updated 2022</span>
             </div>
             <span className={styles.delimiter}>-</span>
