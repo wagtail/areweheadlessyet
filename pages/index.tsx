@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <Head>
                 <title>Are we headless yet? | Wagtail</title>
-                <link rel="icon" href="/images/headless-logo.svg" />
+                <link rel="icon" href="/favicon.ico" />
                 <link
                     rel="preload"
                     href="/fonts/inter/inter-regular.woff2"
