@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
-import TopCTA from '../components/TopCTA';
-import BottomCTA from '../components/BottomCTA';
+import HeadingSlackCTA from '../components/HeadingSlackCTA';
+import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <TopCTA />
+                <HeadingSlackCTA />
                 <div className={styles.hero}>
                     <div className={styles.logo}>
                         <Image
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                         </p>
                     </a>
                 </div>
-                <BottomCTA />
+                <FooterSlackCTA />
                 <Footer />
             </main>
         </div>

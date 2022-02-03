@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './BottomCTA.module.scss';
+import styles from './FooterSlackCTA.module.scss';
 
-export const BottomCTA = () => (
+export const FooterSlackCTA = () => (
     <div className={styles.container}>
         <div className={styles.emoji}>👂</div>
         <a
@@ -17,4 +17,4 @@ export const BottomCTA = () => (
     </div>
 );
 
-export default BottomCTA;
+export default FooterSlackCTA;

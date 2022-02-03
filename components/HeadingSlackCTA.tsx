@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './TopCTA.module.scss';
+import styles from './HeadingSlackCTA.module.scss';
 
-export const TopCTA = () => (
+export const HeadingSlackCTA = () => (
     <a
         className={styles.container}
         href="https://github.com/wagtail/wagtail/wiki/Slack"
@@ -15,4 +15,4 @@ export const TopCTA = () => (
     </a>
 );
 
-export default TopCTA;
+export default HeadingSlackCTA;
