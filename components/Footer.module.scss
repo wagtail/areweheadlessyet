@@ -22,7 +22,7 @@
     }
 
     &__text {
-        @include font-size(xxs);
+        @include font-size(xs);
         display: flex;
         flex-direction: column;
         position: relative;

@@ -16,6 +16,15 @@ body {
     font-family: $font--primary;
     background: var(--color--background);
     color: var(--color--text);
+    font-size: $small-font-size;
+
+    @include media-query(medium) {
+        font-size: $medium-font-size;
+    }
+
+    @include media-query(large) {
+        font-size: $large-font-size;
+    }
 }
 
 a {

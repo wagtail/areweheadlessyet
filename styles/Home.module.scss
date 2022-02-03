@@ -26,8 +26,8 @@
 }
 
 .description {
-    line-height: 1.5;
     @include font-size(s);
+    line-height: 1.5;
     margin-bottom: 0;
 }
 
@@ -78,9 +78,11 @@
     line-height: 1.5;
 }
 
-.logo {
-    align-self: flex-end;
-    margin-right: 1.5rem;
+@include media-query(medium) {
+    .logo {
+        align-self: flex-end;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -94,21 +96,19 @@
     margin-top: 4rem;
     max-width: 100%;
 
-    @include media-query(large) {
+    @include media-query(medium) {
         display: flex;
         margin-bottom: 4rem;
     }
 
     &__body {
         position: relative;
-        top: -63px;
+        top: -66px;
+        left: -2px;
 
         @include media-query(medium) {
-            top: -73px;
-        }
-
-        @include media-query(large) {
             top: 0;
+            left: 0;
         }
     }
 }

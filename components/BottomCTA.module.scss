@@ -1,18 +1,26 @@
 .container {
+    @include font-size(m);
     align-self: flex-start;
     display: flex;
     position: relative;
     margin: 2rem 0;
     padding: 2rem 0;
-    color: inherit;
 
     @include media-query(large) {
         margin: 5rem 0 0 5rem;
         padding: 2rem;
     }
 
+    .link {
+        color: inherit;
+    }
+
+    .emoji {
+        margin-right: 0.5rem;
+    }
+
     .cta {
-        font-size: 30px;
+        @include font-size(xl);
         line-height: 1.15;
         font-weight: $weight--extrabold;
         display: flex;
@@ -26,10 +34,6 @@
         &__tag {
             color: var(--color--accent);
             font-weight: inherit;
-        }
-
-        &__text {
-            @include font-size(m);
         }
     }
 
