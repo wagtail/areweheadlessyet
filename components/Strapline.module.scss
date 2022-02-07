@@ -1,0 +1,25 @@
+.strapline {
+    @include font-size(m);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    margin-bottom: 0;
+
+    @include media-query(large) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__text {
+        flex-shrink: 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 0.2rem;
+    }
+}

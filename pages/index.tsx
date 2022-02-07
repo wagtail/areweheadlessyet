@@ -5,8 +5,9 @@ import styles from '../styles/Home.module.scss';
 import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
+import Strapline from '../components/Strapline';
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ page }) => {
     return (
         <div className={styles.container}>
             <Head>
@@ -51,10 +52,10 @@ const Home: NextPage = () => {
                             </strong>{' '}
                             yet?
                         </h1>
-                        <p className={styles.description}>
-                            👍 Yes! But there's plenty we could improve for
-                            Wagtail's developers
-                        </p>
+                        <Strapline
+                            icon={page.strapline_icon}
+                            text={page.strapline_text}
+                        />
                     </div>
                 </div>
 
@@ -103,5 +104,37 @@ const Home: NextPage = () => {
         </div>
     );
 };
+
+async function getHomePageID() {
+    const response = await fetch(
+        'https://areweheadlessyet.staging.wagtail.org/api/v2/pages/?type=areweheadlessyet.AreWeHeadlessYetHomePage',
+        {
+            headers: {
+                Authorization:
+                    'Basic ' +
+                    Buffer.from(`wagtailio:showmewagtailio`).toString('base64'),
+            },
+        },
+    );
+    const result = await response.json();
+    return result.items[0].id;
+}
+
+export async function getStaticProps() {
+    const HomePageID = await getHomePageID();
+    const response = await fetch(
+        `https://areweheadlessyet.staging.wagtail.org/api/v2/pages/${HomePageID}`,
+        {
+            headers: {
+                Authorization:
+                    'Basic ' +
+                    Buffer.from(`wagtailio:showmewagtailio`).toString('base64'),
+            },
+        },
+    );
+    const page = await response.json();
+
+    return { props: { page: page } };
+}
 
 export default Home;
