@@ -25,12 +25,6 @@
     }
 }
 
-.description {
-    @include font-size(s);
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
 .code {
     background: #fafafa;
     border-radius: 5px;
