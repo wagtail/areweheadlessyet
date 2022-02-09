@@ -1,0 +1,16 @@
+.card {
+    margin-bottom: 2.5rem;
+
+    &__date {
+        opacity: 0.7;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 900;
+    }
+
+    &__body {
+        margin: 0.5rem 0;
+    }
+}
