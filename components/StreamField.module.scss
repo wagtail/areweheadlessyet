@@ -1,0 +1,36 @@
+.container {
+    max-width: 800px;
+}
+
+.section {
+    position: relative;
+    margin: 4rem 0;
+    line-height: 1.5;
+
+    @include media-query(medium) {
+        margin: 4rem;
+    }
+
+    > h2 {
+        @include font-size(xl);
+        font-weight: 900;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2rem;
+        left: -2.5rem;
+        width: 50px;
+        border-color: var(--color--accent);
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 2px;
+        transform: rotate(-3.58deg);
+
+        @include media-query(medium) {
+            top: 1rem;
+            left: -4rem;
+        }
+    }
+}
