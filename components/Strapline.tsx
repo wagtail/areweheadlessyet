@@ -7,13 +7,10 @@ type StraplineProps = {
     text: string;
 };
 
-const getIconDisplay = (icon: IconChoice) =>
-    icon === 'thumbs up' ? '👍 Yes!' : '👎 No!';
-
 export const Strapline = ({ icon, text }: StraplineProps) => (
     <div className={styles.strapline}>
         <strong className={styles.strapline__icon}>
-            {getIconDisplay(icon)}
+            {icon === 'thumbs up' ? '👍 Yes!' : '👎 No!'}
         </strong>
         <div
             className={styles.strapline__text}
