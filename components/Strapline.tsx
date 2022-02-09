@@ -8,18 +8,18 @@ type StraplineProps = {
 };
 
 const getIconDisplay = (icon: IconChoice) =>
-    icon === 'thumbs up' ? '👍 Yes' : '👎 No';
+    icon === 'thumbs up' ? '👍 Yes!' : '👎 No!';
 
 export const Strapline = ({ icon, text }: StraplineProps) => (
-    <p className={styles.strapline}>
+    <div className={styles.strapline}>
         <strong className={styles.strapline__icon}>
-            {getIconDisplay(icon)}!
+            {getIconDisplay(icon)}
         </strong>
         <div
             className={styles.strapline__text}
             dangerouslySetInnerHTML={{ __html: text }}
         />
-    </p>
+    </div>
 );
 
 export default Strapline;
