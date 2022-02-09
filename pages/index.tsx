@@ -9,6 +9,7 @@ import Strapline from '../components/Strapline';
 import StreamField from '../components/StreamField';
 import StreamFieldBlock from '../components/types';
 import { IconChoice } from '../components/Strapline';
+import logo from '../public/images/headless-logo.svg';
 
 interface Page {
     id: number;
@@ -49,12 +50,7 @@ const Home: NextPage<{ page: Page }> = ({ page }) => {
                 <HeadingSlackCTA />
                 <div className={styles.hero}>
                     <div className={styles.logo}>
-                        <Image
-                            src="/images/headless-logo.svg"
-                            alt=""
-                            width={215}
-                            height={225}
-                        />
+                        <Image src={logo} alt="" />
                     </div>
                     <div className={styles.hero__body}>
                         <h1 className={styles.title}>
