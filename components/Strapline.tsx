@@ -1,6 +1,6 @@
 import styles from './Strapline.module.scss';
 
-type IconChoice = 'thumbs up' | 'thumbs down';
+export type IconChoice = 'thumbs up' | 'thumbs down';
 
 type StraplineProps = {
     icon: IconChoice;
