@@ -37,6 +37,10 @@ a {
     }
 }
 
+li::marker {
+    color: var(--color--accent);
+}
+
 *,
 *::before,
 *::after {
