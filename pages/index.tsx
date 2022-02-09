@@ -6,6 +6,7 @@ import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 import Strapline from '../components/Strapline';
+import StreamField from '../components/StreamField';
 
 const Home: NextPage = ({ page }) => {
     return (
@@ -40,8 +41,8 @@ const Home: NextPage = ({ page }) => {
                         <Image
                             src="/images/headless-logo.svg"
                             alt=""
-                            width={140}
-                            height={160}
+                            width={215}
+                            height={225}
                         />
                     </div>
                     <div className={styles.hero__body}>
@@ -58,45 +59,8 @@ const Home: NextPage = ({ page }) => {
                         />
                     </div>
                 </div>
-
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>
-                            Find in-depth information about Next.js features and
-                            API.
-                        </p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>
-                            Learn about Next.js in an interactive course with
-                            quizzes!
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h2>Examples &rarr;</h2>
-                        <p>
-                            Discover and deploy boilerplate example Next.js
-                            projects.
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h2>Deploy &rarr;</h2>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL
-                            with Vercel.
-                        </p>
-                    </a>
+                <div className={styles.stream}>
+                    <StreamField body={page.body} />
                 </div>
                 <FooterSlackCTA />
                 <Footer />
@@ -105,33 +69,34 @@ const Home: NextPage = ({ page }) => {
     );
 };
 
-async function getHomePageID() {
-    const response = await fetch(
-        'https://areweheadlessyet.staging.wagtail.org/api/v2/pages/?type=areweheadlessyet.AreWeHeadlessYetHomePage',
-        {
-            headers: {
-                Authorization:
-                    'Basic ' +
-                    Buffer.from(`wagtailio:showmewagtailio`).toString('base64'),
-            },
-        },
+async function fetchHelper(path: string, params: { [key: string]: string }) {
+    let headers = new Headers();
+    if (process.env.INSTANCE === 'staging') {
+        const auth =
+            'Basic ' +
+            Buffer.from(
+                `${process.env.AUTH_USER}:${process.env.AUTH_PASSWORD}`,
+            ).toString('base64');
+        headers.append('Authorization', auth);
+    }
+    return await fetch(
+        `${process.env.BASE_URL}api/v2/pages/${path}?` +
+            new URLSearchParams(params),
+        { headers: headers },
     );
+}
+
+async function getHomePageID() {
+    const response = await fetchHelper('', {
+        type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
+    });
     const result = await response.json();
     return result.items[0].id;
 }
 
 export async function getStaticProps() {
     const HomePageID = await getHomePageID();
-    const response = await fetch(
-        `https://areweheadlessyet.staging.wagtail.org/api/v2/pages/${HomePageID}`,
-        {
-            headers: {
-                Authorization:
-                    'Basic ' +
-                    Buffer.from(`wagtailio:showmewagtailio`).toString('base64'),
-            },
-        },
-    );
+    const response = await fetchHelper(HomePageID, {});
     const page = await response.json();
 
     return { props: { page: page } };
