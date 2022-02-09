@@ -1,9 +1,16 @@
+import type { IconChoice } from './Strapline';
+
 export default interface StreamFieldBlock {
     type: string;
     value: any;
     id: string;
 }
 
-export interface StreamFieldProps {
+export interface Page {
+    id: number;
+    meta: { [key: string]: string | boolean | null };
+    title: string;
+    strapline_icon: IconChoice;
+    strapline_text: string;
     body: Array<StreamFieldBlock>;
 }
