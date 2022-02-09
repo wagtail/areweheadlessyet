@@ -37,6 +37,10 @@ a {
     }
 }
 
+ul {
+    padding: 0 2rem;
+}
+
 li::marker {
     color: var(--color--accent);
 }

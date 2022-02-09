@@ -1,5 +1,5 @@
 .strapline {
-    @include font-size(l);
+    @include font-size(m);
     display: flex;
     line-height: 1.5;
     flex-direction: column;
@@ -7,6 +7,7 @@
     margin-top: 2rem;
 
     @include media-query(large) {
+        @include font-size(l);
         line-height: 0.75;
         letter-spacing: -1px;
         flex-direction: row;

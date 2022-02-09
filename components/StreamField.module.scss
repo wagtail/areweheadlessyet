@@ -12,8 +12,11 @@
     }
 
     > h2 {
-        @include font-size(xl);
+        @include font-size(xxxl);
         font-weight: 900;
+        line-height: 1;
+        margin: 1.25rem 0;
+        max-width: 224px;
     }
 
     &:before {
