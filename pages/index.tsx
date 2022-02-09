@@ -1,26 +1,19 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
+
+import logo from '../public/images/headless-logo.svg';
 import styles from '../styles/Home.module.scss';
+
 import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 import Strapline from '../components/Strapline';
-import StreamField from '../components/StreamField';
-import StreamFieldBlock from '../components/types';
-import { IconChoice } from '../components/Strapline';
-import logo from '../public/images/headless-logo.svg';
+import StreamField from '../components/StreamField/';
+import { Page } from '../components/types';
+import { Topics } from '../components/blocks/topics_block';
 
-interface Page {
-    id: number;
-    meta: { [key: string]: string | boolean | null };
-    title: string;
-    strapline_icon: IconChoice;
-    strapline_text: string;
-    body: Array<StreamFieldBlock>;
-}
-
-const Home: NextPage<{ page: Page }> = ({ page }) => {
+const Home: NextPage<{ page: Page; topics: Topics }> = ({ page, topics }) => {
     return (
         <div className={styles.container}>
             <Head>
@@ -67,7 +60,7 @@ const Home: NextPage<{ page: Page }> = ({ page }) => {
                     </div>
                 </div>
                 <div className={styles.stream}>
-                    <StreamField body={page.body} />
+                    <StreamField body={page.body} topics={topics.items} />
                 </div>
                 <FooterSlackCTA />
                 <Footer />
@@ -93,7 +86,7 @@ async function fetchHelper(path: string, params: { [key: string]: string }) {
     );
 }
 
-async function getHomePageID() {
+async function getAreWeHeadlessYetHomePageID() {
     const response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
     });
@@ -101,12 +94,25 @@ async function getHomePageID() {
     return result.items[0].id;
 }
 
-export async function getStaticProps() {
-    const HomePageID = await getHomePageID();
-    const response = await fetchHelper(HomePageID, {});
-    const page = await response.json();
+async function getAreWeHeadlessYetHomePage() {
+    const HomePageID = await getAreWeHeadlessYetHomePageID();
+    const res = await fetchHelper(HomePageID, {});
+    return await res.json();
+}
 
-    return { props: { page: page } };
+async function fetchTopics() {
+    const response = await fetchHelper('', {
+        type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
+        fields: 'title,status_color,introduction',
+    });
+    return await response.json();
+}
+
+export async function getStaticProps() {
+    const page = await getAreWeHeadlessYetHomePage();
+    const topics = await fetchTopics();
+
+    return { props: { page: page, topics: topics } };
 }
 
 export default Home;
