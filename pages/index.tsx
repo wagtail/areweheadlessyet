@@ -7,8 +7,19 @@ import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 import Strapline from '../components/Strapline';
 import StreamField from '../components/StreamField';
+import StreamFieldBlock from '../components/types';
+import { IconChoice } from '../components/Strapline';
 
-const Home: NextPage = ({ page }) => {
+interface Page {
+    id: number;
+    meta: { [key: string]: string | boolean | null };
+    title: string;
+    strapline_icon: IconChoice;
+    strapline_text: string;
+    body: Array<StreamFieldBlock>;
+}
+
+const Home: NextPage<{ page: Page }> = ({ page }) => {
     return (
         <div className={styles.container}>
             <Head>
