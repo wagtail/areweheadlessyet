@@ -1,5 +1,5 @@
 .footer {
-    padding: 2rem 0;
+    padding: 3rem 5rem 1rem 0;
     position: relative;
     line-height: 1.5;
     width: 100%;
@@ -43,11 +43,9 @@
     .logo {
         transform: rotate(159.81deg);
         position: absolute;
-        right: -1rem;
-        top: 0;
-
-        @include media-query(medium) {
-            position: relative;
-        }
+        right: 0;
+        bottom: -1rem;
+        max-width: 84px;
+        max-height: 88px;
     }
 }
