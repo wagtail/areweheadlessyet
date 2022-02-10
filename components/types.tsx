@@ -6,7 +6,7 @@ export default interface StreamFieldBlock {
     id: string;
 }
 
-export interface Page {
+export interface AreWeHeadlessYetHomePage {
     id: number;
     meta: { [key: string]: string | boolean | null };
     title: string;
