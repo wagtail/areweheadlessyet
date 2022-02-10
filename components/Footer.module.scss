@@ -2,7 +2,6 @@
     padding: 2rem 0;
     position: relative;
     line-height: 1.5;
-    text-align: center;
     width: 100%;
     overflow: hidden;
 
@@ -22,11 +21,10 @@
     }
 
     &__text {
-        @include font-size(xs);
+        @include font-size(xxs);
         display: flex;
         flex-direction: column;
         position: relative;
-        z-index: 1;
 
         @include media-query(medium) {
             flex-direction: row;
@@ -45,14 +43,11 @@
     .logo {
         transform: rotate(159.81deg);
         position: absolute;
-        right: 0;
+        right: -1rem;
         top: 0;
-        z-index: 0;
-        opacity: 0.5;
 
         @include media-query(medium) {
             position: relative;
-            opacity: initial;
         }
     }
 }
