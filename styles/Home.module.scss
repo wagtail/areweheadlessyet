@@ -30,25 +30,31 @@
     max-width: 800px;
 }
 
-@include media-query(medium) {
-    .logo {
+.logo {
+    max-width: 128px;
+    max-height: 135px;
+
+    @include media-query(medium) {
         align-self: flex-end;
         margin-right: 1.5rem;
+        max-width: 213px;
+        max-height: 225px;
     }
 }
 
 .hero {
-    margin-top: 7.5rem;
+    margin-top: 4rem;
     max-width: 100%;
 
     @include media-query(medium) {
+        margin-top: 7.5rem;
         display: flex;
         margin-bottom: 4rem;
     }
 
     &__body {
         position: relative;
-        top: -60px;
+        top: -50px;
         left: -5px;
 
         @include media-query(medium) {
