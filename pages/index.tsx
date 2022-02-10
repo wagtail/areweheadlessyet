@@ -5,15 +5,19 @@ import Head from 'next/head';
 import logo from '../public/images/headless-logo.svg';
 import styles from '../styles/Home.module.scss';
 
+import type { AreWeHeadlessYetHomePage } from '../components/types';
+import type { Topics } from '../components/blocks/topics_block';
+
 import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 import Strapline from '../components/Strapline';
 import StreamField from '../components/StreamField/';
-import { Page } from '../components/types';
-import { Topics } from '../components/blocks/topics_block';
 
-const Home: NextPage<{ page: Page; topics: Topics }> = ({ page, topics }) => {
+const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
+    page,
+    topics,
+}) => {
     return (
         <div className={styles.container}>
             <Head>
