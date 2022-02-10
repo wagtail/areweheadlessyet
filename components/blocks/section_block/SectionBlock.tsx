@@ -1,4 +1,4 @@
-import { SectionBlockProps } from './types';
+import type { SectionBlockProps } from './types';
 import SECTION_BLOCKS from './blocks';
 
 const SectionBlock = ({ title, content }: SectionBlockProps) => (

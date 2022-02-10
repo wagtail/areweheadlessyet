@@ -1,5 +1,5 @@
 import { SectionBlock, IssuesBlock, NewsBlock, TopicsBlock } from '../blocks';
-import { StreamFieldProps } from './types';
+import type { StreamFieldProps } from './types';
 import styles from './StreamField.module.scss';
 
 const BLOCKS = {

@@ -1,4 +1,4 @@
-import IssuesBlockProps from './types';
+import type IssuesBlockProps from './types';
 
 const IssuesBlock = ({ title, summary, issues }: IssuesBlockProps) => (
     <>

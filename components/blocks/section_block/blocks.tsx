@@ -1,4 +1,8 @@
-import { RichTextBlockItem, LinkBlockValue, LinkGroupBlockItem } from './types';
+import type {
+    RichTextBlockItem,
+    LinkBlockValue,
+    LinkGroupBlockItem,
+} from './types';
 
 const RichTextBlock = ({ value }: RichTextBlockItem) => (
     <div dangerouslySetInnerHTML={{ __html: value }} />

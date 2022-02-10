@@ -4,7 +4,7 @@ import statusGreen from '../../../public/images/status-green.svg';
 import statusAmber from '../../../public/images/status-amber.svg';
 import statusRed from '../../../public/images/status-red.svg';
 
-import { Topic } from './types';
+import type { Topic } from './types';
 import styles from './TopicsBlock.module.scss';
 
 const StatusImages = {

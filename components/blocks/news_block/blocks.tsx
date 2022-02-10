@@ -1,4 +1,4 @@
-import { BlogPostValue } from './types';
+import type { BlogPostValue } from './types';
 import styles from './NewsBlock.module.scss';
 
 export const PostBlock = ({
