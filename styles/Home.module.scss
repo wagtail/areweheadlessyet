@@ -20,6 +20,10 @@
     letter-spacing: -1px;
     font-weight: $weight--extrabold;
 
+    @include media-query(large) {
+        @include font-size(xxxxxl);
+    }
+
     &__emphasis {
         color: var(--color--accent);
         font-weight: $weight--extrabold;
@@ -35,6 +39,11 @@
     max-height: 135px;
 
     @include media-query(medium) {
+        max-width: 171px;
+        max-height: 180px;
+    }
+
+    @include media-query(large) {
         align-self: flex-end;
         margin-right: 1.5rem;
         max-width: 213px;
@@ -46,7 +55,7 @@
     margin-top: 4rem;
     max-width: 100%;
 
-    @include media-query(medium) {
+    @include media-query(large) {
         margin-top: 7.5rem;
         display: flex;
         margin-bottom: 4rem;
@@ -54,10 +63,14 @@
 
     &__body {
         position: relative;
-        top: -50px;
+        top: -45px;
         left: -5px;
 
         @include media-query(medium) {
+            top: -50px;
+        }
+
+        @include media-query(large) {
             top: 0;
             left: 0;
         }

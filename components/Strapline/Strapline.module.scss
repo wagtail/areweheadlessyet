@@ -12,6 +12,7 @@
         letter-spacing: -1px;
         flex-direction: row;
         align-items: center;
+        margin-top: 4rem;
     }
 
     &__text {
@@ -23,12 +24,8 @@
     }
 
     &__icon {
-        @include font-size(xl);
+        @include font-size(l);
         flex-shrink: 0;
         margin-right: 0.2rem;
-
-        @include media-query(large) {
-            @include font-size(l);
-        }
     }
 }
