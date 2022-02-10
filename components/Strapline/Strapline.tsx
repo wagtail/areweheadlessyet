@@ -1,11 +1,5 @@
 import styles from './Strapline.module.scss';
-
-export type IconChoice = 'thumbs up' | 'thumbs down';
-
-type StraplineProps = {
-    icon: IconChoice;
-    text: string;
-};
+import type { StraplineProps } from './types';
 
 export const Strapline = ({ icon, text }: StraplineProps) => (
     <div className={styles.strapline}>
