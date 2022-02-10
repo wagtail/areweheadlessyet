@@ -67,7 +67,7 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
                     <StreamField body={page.body} topics={topics.items} />
                 </div>
                 <FooterSlackCTA />
-                <Footer />
+                <Footer last_published_at={page.last_published_at} />
             </main>
         </div>
     );

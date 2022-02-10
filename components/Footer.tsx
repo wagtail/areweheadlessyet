@@ -1,14 +1,23 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 
-export const Footer = () => (
+type FooterProps = {
+    last_published_at: string;
+};
+
+function getYear(date: string) {
+    const dateObject = new Date(date);
+    return dateObject.getFullYear();
+}
+
+export const Footer = ({ last_published_at }: FooterProps) => (
     <footer className={styles.footer}>
         <div className={styles.footer__text}>
             <div>
                 <strong className={styles.copyright}>
                     © Are we headless yet?
                 </strong>
-                <span>Updated 2022</span>
+                <span>Updated {getYear(last_published_at)}</span>
             </div>
             <span className={styles.delimiter}>-</span>
             <div>
