@@ -7,6 +7,7 @@
     padding: 2rem 0;
 
     @include media-query(large) {
+        @include font-size(xl);
         margin: 5rem 0 0 5rem;
         padding: 2rem;
     }
