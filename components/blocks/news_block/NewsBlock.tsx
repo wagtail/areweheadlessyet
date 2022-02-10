@@ -1,4 +1,4 @@
-import NewsBlockProps from './types';
+import type NewsBlockProps from './types';
 import PostBlock from './blocks';
 
 const NewsBlock = ({ title, blog_posts }: NewsBlockProps) => (
