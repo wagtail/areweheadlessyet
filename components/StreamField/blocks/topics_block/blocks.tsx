@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import statusGreen from '../../../public/images/status-green.svg';
-import statusAmber from '../../../public/images/status-amber.svg';
-import statusRed from '../../../public/images/status-red.svg';
+import statusGreen from '../../../../public/images/status-green.svg';
+import statusAmber from '../../../../public/images/status-amber.svg';
+import statusRed from '../../../../public/images/status-red.svg';
 
 import type { Topic } from './types';
 import styles from './TopicsBlock.module.scss';

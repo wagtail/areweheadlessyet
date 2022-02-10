@@ -6,7 +6,7 @@ import logo from '../public/images/headless-logo.svg';
 import styles from '../styles/Home.module.scss';
 
 import type { AreWeHeadlessYetHomePage } from '../components/types';
-import type { Topics } from '../components/blocks/topics_block';
+import type { Topics } from '../components/StreamField/blocks/topics_block';
 
 import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';

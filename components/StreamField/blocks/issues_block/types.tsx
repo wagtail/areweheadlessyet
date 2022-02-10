@@ -1,4 +1,4 @@
-import StreamFieldBlock from '../../types';
+import StreamFieldBlock from '../../../types';
 
 interface IssueValue {
     title: string;

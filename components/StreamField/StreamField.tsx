@@ -1,4 +1,4 @@
-import { SectionBlock, IssuesBlock, NewsBlock, TopicsBlock } from '../blocks';
+import { SectionBlock, IssuesBlock, NewsBlock, TopicsBlock } from './blocks';
 import type { StreamFieldProps } from './types';
 import styles from './StreamField.module.scss';
 

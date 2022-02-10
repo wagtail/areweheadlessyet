@@ -1,4 +1,4 @@
-import StreamFieldBlock from '../../types';
+import StreamFieldBlock from '../../../types';
 
 export interface BlogPostValue {
     date: string;
