@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
-
-type FooterProps = {
-    last_published_at: string;
-};
+import type FooterProps from './types';
 
 function getYear(date: string) {
     const dateObject = new Date(date);

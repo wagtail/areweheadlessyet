@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './FooterSlackCTA.module.scss';
 
 export const FooterSlackCTA = () => (
