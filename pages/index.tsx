@@ -1,11 +1,8 @@
 import type { NextPage } from 'next';
-
-import styles from '../styles/Home.module.scss';
-
-import { getAreWeHeadlessYetHomePage, getAreWeHeadlessYetTopics } from '../lib';
-
 import type { AreWeHeadlessYetHomePage } from '../components/types';
 import type { Topics } from '../components/StreamField/blocks/topics_block';
+
+import { getAreWeHeadlessYetHomePage, getAreWeHeadlessYetTopics } from '../lib';
 
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
@@ -18,9 +15,7 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
     return (
         <Layout last_published_at={page.last_published_at}>
             <HomeHero icon={page.strapline_icon} text={page.strapline_text} />
-            <div className={styles.stream}>
-                <StreamField body={page.body} topics={topics.items} />
-            </div>
+            <StreamField body={page.body} topics={topics.items} />
         </Layout>
     );
 };

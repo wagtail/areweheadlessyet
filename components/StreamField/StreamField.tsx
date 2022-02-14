@@ -15,7 +15,7 @@ const StreamField = ({ body, topics }: StreamFieldProps) => {
     }
 
     return (
-        <>
+        <div className={styles.container}>
             {body.map((block, i) => {
                 const blockType = block.type;
                 if (blockType === 'topics') {
@@ -32,7 +32,7 @@ const StreamField = ({ body, topics }: StreamFieldProps) => {
                     </div>
                 );
             })}
-        </>
+        </div>
     );
 };
 
