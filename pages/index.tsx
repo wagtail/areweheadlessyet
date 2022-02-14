@@ -12,7 +12,7 @@ import HeadingSlackCTA from '../components/HeadingSlackCTA';
 import FooterSlackCTA from '../components/FooterSlackCTA';
 import Footer from '../components/Footer';
 import Strapline from '../components/Strapline/';
-import StreamField from '../components/StreamField/';
+import StreamField from '../components/StreamField';
 
 const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
     page,

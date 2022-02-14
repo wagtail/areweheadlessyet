@@ -1,4 +1,4 @@
-import type { IconChoice } from './Strapline/';
+import type { IconChoice } from './Strapline';
 
 export default interface StreamFieldBlock {
     type: string;
