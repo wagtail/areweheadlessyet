@@ -1,6 +1,8 @@
 import { SectionBlock, IssuesBlock, NewsBlock, TopicsBlock } from './blocks';
 import type { StreamFieldProps } from './types';
 import styles from './StreamField.module.scss';
+import { RichTextBlock } from './blocks/SectionBlock';
+import { RichTextBlockItem } from './blocks/SectionBlock/types';
 
 const BLOCKS = {
     section: SectionBlock,
@@ -22,6 +24,16 @@ const StreamField = ({ body, topics }: StreamFieldProps) => {
                     return (
                         <div key={i} className={styles.section}>
                             <TopicsBlock {...block.value} topics={topics} />
+                        </div>
+                    );
+                }
+                if (blockType === 'text') {
+                    return (
+                        <div key={i} className={styles.text}>
+                            <RichTextBlock
+                                key={i}
+                                {...(block as RichTextBlockItem)}
+                            />
                         </div>
                     );
                 }
