@@ -13,7 +13,10 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
     topics,
 }) => {
     return (
-        <Layout last_published_at={page.last_published_at}>
+        <Layout
+            title="Are we headless yet? | Wagtail"
+            last_published_at={page.last_published_at}
+        >
             <HomeHero icon={page.strapline_icon} text={page.strapline_text} />
             <StreamField body={page.body} topics={topics.items} />
         </Layout>

@@ -8,10 +8,10 @@ import HeadingSlackCTA from './HeadingSlackCTA';
 import FooterSlackCTA from './FooterSlackCTA';
 import Footer from './Footer';
 
-const Layout = ({ children, last_published_at }: LayoutProps) => (
-    <div className={styles.container}>
+const Layout = ({ title, children, last_published_at }: LayoutProps) => (
+    <>
         <Head>
-            <title>Are we headless yet? | Wagtail</title>
+            <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
             <link
                 rel="preload"
@@ -32,13 +32,15 @@ const Layout = ({ children, last_published_at }: LayoutProps) => (
                 crossOrigin=""
             />
         </Head>
-        <main className={styles.main}>
-            <HeadingSlackCTA />
-            {children}
-            <FooterSlackCTA />
-            <Footer last_published_at={last_published_at} />
-        </main>
-    </div>
+        <div className={styles.container}>
+            <main className={styles.main}>
+                <HeadingSlackCTA />
+                {children}
+                <FooterSlackCTA />
+                <Footer last_published_at={last_published_at} />
+            </main>
+        </div>
+    </>
 );
 
 export default Layout;
