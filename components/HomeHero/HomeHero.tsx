@@ -1,9 +1,6 @@
 import Image from 'next/image';
-
 import logo from '../../public/images/headless-logo.svg';
-
 import styles from './HomeHero.module.scss';
-
 import Strapline from './Strapline';
 import type { StraplineProps } from './Strapline/types';
 
