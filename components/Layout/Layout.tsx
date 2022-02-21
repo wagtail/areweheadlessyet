@@ -1,9 +1,6 @@
 import Head from 'next/head';
-
 import styles from './Layout.module.scss';
-
 import type LayoutProps from './types';
-
 import HeadingSlackCTA from './HeadingSlackCTA';
 import FooterSlackCTA from './FooterSlackCTA';
 import Footer from './Footer';
