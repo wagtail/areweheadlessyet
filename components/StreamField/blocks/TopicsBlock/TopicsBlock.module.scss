@@ -16,7 +16,7 @@
 
     &__title {
         @include font-size(m);
-        font-weight: 900;
+        font-weight: $weight--extrabold;
         line-height: 1.25;
         margin: 0;
     }

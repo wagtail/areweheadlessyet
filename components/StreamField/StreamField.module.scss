@@ -13,7 +13,7 @@
 
     > h2 {
         @include font-size(xxxl);
-        font-weight: 900;
+        font-weight: $weight--extrabold;
         line-height: 1;
         margin: 1.25rem 0;
         max-width: 224px;
