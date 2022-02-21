@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import type { AreWeHeadlessYetHomePage } from '../components/types';
-import type { Topics } from '../components/StreamField/blocks/topics_block';
+import type { Topics } from '../components/StreamField/blocks/TopicsBlock';
 
 import { getAreWeHeadlessYetHomePage, getAreWeHeadlessYetTopics } from '../lib';
 

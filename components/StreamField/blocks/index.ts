@@ -1,6 +1,6 @@
-import NewsBlock from './news_block';
-import SectionBlock from './section_block';
-import IssuesBlock from './issues_block';
-import TopicsBlock from './topics_block';
+import NewsBlock from './NewsBlock';
+import SectionBlock from './SectionBlock';
+import IssuesBlock from './IssuesBlock';
+import TopicsBlock from './TopicsBlock';
 
 export { NewsBlock, SectionBlock, IssuesBlock, TopicsBlock };
