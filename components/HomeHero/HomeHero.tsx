@@ -11,7 +11,7 @@ const HomeHero = ({ icon, text }: StraplineProps) => (
         </div>
         <div className={styles.hero__body}>
             <h1 className={styles.title}>
-                Are we <br />
+                Are we <br aria-hidden />
                 <strong className={styles.title__emphasis}>
                     headless
                 </strong>{' '}
