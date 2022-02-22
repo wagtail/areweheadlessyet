@@ -9,6 +9,11 @@
         right: 0;
     }
 
+    .logo {
+        width: 31px;
+        height: 31px;
+    }
+
     .cta {
         @include font-size(xs);
         display: flex;

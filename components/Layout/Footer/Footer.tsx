@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { AreWeHeadlessYetLogo } from '../../SVG';
 import styles from './Footer.module.scss';
 import type FooterProps from './types';
 
@@ -25,12 +25,7 @@ export const Footer = ({ lastPublishedAt }: FooterProps) => (
             </div>
         </div>
         <div className={styles.logo}>
-            <Image
-                src="/images/headless-logo.svg"
-                alt=""
-                width={127}
-                height={133}
-            />
+            <AreWeHeadlessYetLogo color="#3BECCD" />
         </div>
     </footer>
 );

@@ -16,25 +16,25 @@
 }
 
 .logo {
-    max-width: 128px;
-    max-height: 135px;
+    width: 128px;
+    height: 135px;
 
     @include media-query(medium) {
-        max-width: 171px;
-        max-height: 180px;
+        width: 171px;
+        height: 180px;
     }
 
     @include media-query(large) {
         align-self: flex-end;
         margin-right: 1.5rem;
-        max-width: 213px;
-        max-height: 225px;
+        width: 213px;
+        height: 225px;
     }
 }
 
 .hero {
     margin-top: 4rem;
-    max-width: 100%;
+    width: 100%;
 
     @include media-query(large) {
         margin-top: 7.5rem;

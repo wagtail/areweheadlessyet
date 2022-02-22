@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import { SlackLogo } from '../../SVG';
 import styles from './HeadingSlackCTA.module.scss';
 
 export const HeadingSlackCTA = () => (
     <div className={styles.container}>
-        <div>
-            <Image src="/images/slack-logo.svg" alt="" width={31} height={31} />
+        <div className={styles.logo}>
+            <SlackLogo color="#fff" />
         </div>
         <div className={styles.cta}>
             Join{' '}
