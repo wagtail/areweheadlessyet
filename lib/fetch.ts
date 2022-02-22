@@ -23,16 +23,20 @@ async function getAreWeHeadlessYetHomePageID() {
     return result.items[0].id;
 }
 
+const camelize = require('camelize');
+
 export async function getAreWeHeadlessYetHomePage() {
     const HomePageID = await getAreWeHeadlessYetHomePageID();
-    const res = await fetchHelper(HomePageID, {});
-    return await res.json();
+    let response = await fetchHelper(HomePageID, {});
+    response = await response.json();
+    return camelize(response);
 }
 
 export async function getAreWeHeadlessYetTopics() {
-    const response = await fetchHelper('', {
+    let response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
         fields: 'title,status_color,introduction',
     });
-    return await response.json();
+    response = await response.json();
+    return camelize(response);
 }

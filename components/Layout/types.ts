@@ -1,6 +1,6 @@
 type LayoutProps = {
     title: string;
-    last_published_at: string;
+    lastPublishedAt: string;
     children?: React.ReactNode;
 };
 

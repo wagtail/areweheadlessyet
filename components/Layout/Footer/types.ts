@@ -1,5 +1,5 @@
 type FooterProps = {
-    last_published_at: string;
+    lastPublishedAt: string;
 };
 
 export default FooterProps;

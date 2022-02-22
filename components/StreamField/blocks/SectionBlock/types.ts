@@ -7,7 +7,7 @@ export interface RichTextBlockItem extends StreamFieldBlock {
 
 export interface LinkBlockValue {
     link: string;
-    link_text: string;
+    linkText: string;
 }
 
 export interface LinkBlockItem extends StreamFieldBlock {

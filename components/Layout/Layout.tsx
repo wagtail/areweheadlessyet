@@ -5,7 +5,7 @@ import HeadingSlackCTA from './HeadingSlackCTA';
 import FooterSlackCTA from './FooterSlackCTA';
 import Footer from './Footer';
 
-const Layout = ({ title, children, last_published_at }: LayoutProps) => (
+const Layout = ({ title, children, lastPublishedAt }: LayoutProps) => (
     <>
         <Head>
             <title>{title}</title>
@@ -34,7 +34,7 @@ const Layout = ({ title, children, last_published_at }: LayoutProps) => (
                 <HeadingSlackCTA />
                 {children}
                 <FooterSlackCTA />
-                <Footer last_published_at={last_published_at} />
+                <Footer lastPublishedAt={lastPublishedAt} />
             </main>
         </div>
     </>

@@ -8,9 +8,9 @@ const RichTextBlock = ({ value }: RichTextBlockItem) => (
     <div dangerouslySetInnerHTML={{ __html: value }} />
 );
 
-const LinkBlock = ({ link, link_text }: LinkBlockValue) => (
+const LinkBlock = ({ link, linkText }: LinkBlockValue) => (
     <li>
-        <a href={link}>{link_text}</a>
+        <a href={link}>{linkText}</a>
     </li>
 );
 

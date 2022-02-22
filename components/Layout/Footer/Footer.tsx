@@ -7,14 +7,14 @@ function getYear(date: string) {
     return dateObject.getFullYear();
 }
 
-export const Footer = ({ last_published_at }: FooterProps) => (
+export const Footer = ({ lastPublishedAt }: FooterProps) => (
     <footer className={styles.footer}>
         <div className={styles.footer__text}>
             <div>
                 <strong className={styles.copyright}>
                     © Are we headless yet?
                 </strong>
-                <span>Updated {getYear(last_published_at)}</span>
+                <span>Updated {getYear(lastPublishedAt)}</span>
             </div>
             <span className={styles.delimiter}>-</span>
             <div>

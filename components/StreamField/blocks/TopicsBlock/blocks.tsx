@@ -13,10 +13,10 @@ const StatusImages = {
     amber: statusAmber,
 };
 
-export const TopicBlock = ({ title, status_color, introduction }: Topic) => (
+export const TopicBlock = ({ title, statusColor, introduction }: Topic) => (
     <div className={styles.card}>
         <div className={styles.card__status}>
-            <Image src={StatusImages[status_color]} alt="" />
+            <Image src={StatusImages[statusColor]} alt="" />
         </div>
         <h3 className={styles.card__title}>{title}</h3>
         <p className={styles.card__body}>{introduction}</p>

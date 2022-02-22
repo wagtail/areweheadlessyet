@@ -6,7 +6,7 @@ type Topic = {
     id: number;
     meta: { [key: string]: string | boolean | null };
     title: string;
-    status_color: StatusColorChoice;
+    statusColor: StatusColorChoice;
     introduction: string;
     body: Array<StreamFieldBlock>;
 };

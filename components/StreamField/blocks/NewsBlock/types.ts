@@ -14,7 +14,7 @@ interface BlogPost extends StreamFieldBlock {
 
 export type NewsBlockProps = {
     title: string;
-    blog_posts: Array<BlogPost>;
+    blogPosts: Array<BlogPost>;
 };
 
 export default NewsBlockProps;

@@ -1,11 +1,11 @@
 import type NewsBlockProps from './types';
 import PostBlock from './blocks';
 
-const NewsBlock = ({ title, blog_posts }: NewsBlockProps) => (
+const NewsBlock = ({ title, blogPosts }: NewsBlockProps) => (
     <>
         <h2>{title}</h2>
-        {blog_posts.map((post, i) => {
-            return <PostBlock key={i} {...post.value} />;
+        {blogPosts.map((blogPost, i) => {
+            return <PostBlock key={i} {...blogPost.value} />;
         })}
     </>
 );
