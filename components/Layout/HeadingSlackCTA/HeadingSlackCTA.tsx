@@ -1,10 +1,11 @@
 import { SlackLogo } from '../../SVG';
 import styles from './HeadingSlackCTA.module.scss';
+import variables from '../../../styles/variables.module.scss';
 
 export const HeadingSlackCTA = () => (
     <div className={styles.container}>
         <div className={styles.logo}>
-            <SlackLogo color="#fff" />
+            <SlackLogo color={variables.textColor} />
         </div>
         <div className={styles.cta}>
             Join{' '}
