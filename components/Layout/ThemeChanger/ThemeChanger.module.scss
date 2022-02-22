@@ -1,0 +1,80 @@
+.container {
+    position: absolute;
+    top: 1rem;
+
+    @include media-query(large) {
+        left: 0;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 30px;
+
+        input {
+            /* Hide default HTML checkbox */
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked + .slider {
+                background-color: var(--color--toggle-background);
+
+                &:before {
+                    content: url('../../../public/images/smiling-sunglasses.png');
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                }
+            }
+
+            &:focus + .slider {
+                box-shadow: 0 0 1px var(--color--toggle-background);
+            }
+        }
+
+        .slider {
+            position: absolute;
+            border-radius: 70px;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color--toggle-background);
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+
+            &:before {
+                position: absolute;
+                content: url('../../../public/images/moon.png');
+                left: 4px;
+                bottom: 0;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    .switch_night {
+        @include font-size(xxs);
+        font-weight: $weight--extrabold;
+        padding-right: 4px;
+
+        &.light {
+            opacity: 0.5;
+        }
+    }
+
+    .switch_day {
+        @include font-size(xxs);
+        font-weight: $weight--extrabold;
+        padding-left: 4px;
+        opacity: 0.5;
+
+        &.light {
+            opacity: 1;
+        }
+    }
+}
