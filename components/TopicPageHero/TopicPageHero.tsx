@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 import styles from './TopicPageHero.module.scss';
-import bird from '../../public/images/bird.svg';
 import { getTopicStatusImage } from '../../lib';
 import { AreWeHeadlessYetTopicPage } from '../types';
+import { HeadlessBird } from '../SVG';
 
 export const TopicPageHero = ({
     statusColor,
@@ -12,7 +12,7 @@ export const TopicPageHero = ({
 }: AreWeHeadlessYetTopicPage) => (
     <div className={styles.hero}>
         <div className={styles.logo}>
-            <Image src={bird} alt="" layout="responsive" />
+            <HeadlessBird color="#fff" />
         </div>
         <div className={styles.hero__content}>
             <div className={styles.hero__status}>
