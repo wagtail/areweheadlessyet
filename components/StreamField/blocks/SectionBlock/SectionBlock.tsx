@@ -1,13 +1,14 @@
 import type { SectionBlockProps } from './types';
-import SECTION_BLOCKS from './blocks';
+import { RichTextBlock, LinkGroupBlock } from './blocks';
 
 const SectionBlock = ({ title, content }: SectionBlockProps) => (
     <>
         <h2>{title}</h2>
         {content.map((block, i) => {
-            const Block = SECTION_BLOCKS[block.type];
-            // @ts-ignore
-            return <Block key={i} {...block} />;
+            if (block.type === 'text') {
+                return <RichTextBlock key={i} {...block} />;
+            }
+            return <LinkGroupBlock key={i} {...block} />;
         })}
     </>
 );

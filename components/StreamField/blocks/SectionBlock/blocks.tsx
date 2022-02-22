@@ -22,9 +22,4 @@ const LinkGroupBlock = ({ value }: LinkGroupBlockItem) => (
     </ul>
 );
 
-export const SECTION_BLOCKS = {
-    text: RichTextBlock,
-    link_group: LinkGroupBlock,
-};
-
-export default SECTION_BLOCKS;
+export { RichTextBlock, LinkGroupBlock };
