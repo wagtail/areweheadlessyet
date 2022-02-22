@@ -9,6 +9,13 @@
     --color--link: var(--color--lagoon);
 }
 
+[data-theme='light'] {
+    --color--text: #183153;
+    --color--background: var(--color--white);
+    --color--accent: #a55a75;
+    --color--link: #a55a75;
+}
+
 html,
 body {
     padding: 0;
