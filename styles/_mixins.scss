@@ -21,9 +21,5 @@
 */
 
 @mixin font-size($size) {
-    @if $size == null {
-        @warn 'Font size ‘#{$keyword}’ does not exist';
-    } @else {
-        font-size: map-get($font-sizes, $size);
-    }
+    font-size: map-get($font-sizes, $size);
 }
