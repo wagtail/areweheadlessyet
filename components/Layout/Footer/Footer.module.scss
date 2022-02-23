@@ -1,0 +1,51 @@
+.footer {
+    padding: 3rem 5rem 1rem 0;
+    position: relative;
+    line-height: 1.5;
+    width: 100%;
+    overflow: hidden;
+
+    @include media-query(medium) {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    .copyright {
+        margin-right: 0.25rem;
+
+        @include media-query(medium) {
+            font-weight: $weight--bold;
+        }
+    }
+
+    &__text {
+        @include font-size(xxs);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include media-query(medium) {
+            flex-direction: row;
+        }
+    }
+
+    .delimiter {
+        display: none;
+
+        @include media-query(medium) {
+            display: block;
+            margin: 0 1rem;
+        }
+    }
+
+    .logo {
+        transform: rotate(159.81deg);
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+        width: 84px;
+        height: 88px;
+    }
+}
