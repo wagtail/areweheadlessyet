@@ -1,0 +1,18 @@
+.card {
+    margin-bottom: 2.5rem;
+
+    &__date {
+        @include font-size(xxs);
+        opacity: 0.7;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: $weight--extrabold;
+    }
+
+    &__body {
+        @include font-size(xs);
+        margin: 0.25rem 0;
+    }
+}
