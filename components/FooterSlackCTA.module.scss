@@ -1,0 +1,57 @@
+.container {
+    @include font-size(m);
+    align-self: flex-start;
+    display: flex;
+    position: relative;
+    margin: 2rem 0;
+    padding: 2rem 0;
+
+    @include media-query(large) {
+        margin: 5rem 0 0 5rem;
+        padding: 2rem;
+    }
+
+    .link {
+        color: inherit;
+    }
+
+    .emoji {
+        margin-right: 0.5rem;
+    }
+
+    .cta {
+        @include font-size(xl);
+        line-height: 1.15;
+        font-weight: $weight--extrabold;
+        display: flex;
+        flex-direction: column;
+
+        @include media-query(large) {
+            display: block;
+            line-height: 1.5;
+        }
+
+        &__tag {
+            color: var(--color--accent);
+            font-weight: inherit;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -1rem;
+        left: -2.5rem;
+        width: 75%;
+        border-color: var(--color--accent);
+        border-style: solid;
+        border-width: 4px;
+        border-radius: 3px;
+        transform: rotate(-3.58deg);
+
+        @include media-query(large) {
+            left: 0;
+            width: 33%;
+        }
+    }
+}

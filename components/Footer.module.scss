@@ -1,0 +1,58 @@
+.footer {
+    padding: 2rem 0;
+    position: relative;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+
+    @include media-query(medium) {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    .copyright {
+        margin-right: 0.25rem;
+
+        @include media-query(medium) {
+            font-weight: $weight--bold;
+        }
+    }
+
+    &__text {
+        @include font-size(xs);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+
+        @include media-query(medium) {
+            flex-direction: row;
+        }
+    }
+
+    .delimiter {
+        display: none;
+
+        @include media-query(medium) {
+            display: block;
+            margin: 0 1rem;
+        }
+    }
+
+    .logo {
+        transform: rotate(159.81deg);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0;
+        opacity: 0.5;
+
+        @include media-query(medium) {
+            position: relative;
+            opacity: initial;
+        }
+    }
+}
