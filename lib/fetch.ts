@@ -1,3 +1,5 @@
+import humps from 'humps';
+
 async function fetchHelper(path: string, params: { [key: string]: string }) {
     let headers = new Headers();
     if (process.env.INSTANCE === 'staging') {
@@ -23,13 +25,11 @@ async function getAreWeHeadlessYetHomePageID() {
     return result.items[0].id;
 }
 
-const camelize = require('camelize');
-
 export async function getAreWeHeadlessYetHomePage() {
     const HomePageID = await getAreWeHeadlessYetHomePageID();
     let response = await fetchHelper(HomePageID, {});
     response = await response.json();
-    return camelize(response);
+    return humps.camelizeKeys(response);
 }
 
 export async function getAreWeHeadlessYetTopics() {
@@ -38,5 +38,5 @@ export async function getAreWeHeadlessYetTopics() {
         fields: 'title,status_color,introduction',
     });
     response = await response.json();
-    return camelize(response);
+    return humps.camelizeKeys(response);
 }
