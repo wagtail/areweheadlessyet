@@ -29,7 +29,7 @@
         &__tag {
             color: var(--color--accent);
             font-weight: inherit;
-            margin: 0 0.1rem;
+            margin: 0 0.2rem;
 
             @include media-query(large) {
                 margin: 0;
