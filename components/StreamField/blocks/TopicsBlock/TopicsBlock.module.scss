@@ -19,6 +19,10 @@
         font-weight: $weight--extrabold;
         line-height: 1.25;
         margin: 0;
+
+        a {
+            color: inherit;
+        }
     }
 
     &__body {
