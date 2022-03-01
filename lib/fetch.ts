@@ -1,4 +1,5 @@
 import humps from 'humps';
+import type { Topic } from '../components/StreamField/blocks/TopicsBlock';
 
 /**
  * Helper to fetch data from Wagtail's API.
@@ -69,7 +70,7 @@ export async function getAreWeHeadlessYetTopicPages() {
         type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
         fields: '*',
     });
-    return humps.camelizeKeys(response.items);
+    return <Topic[]>humps.camelizeKeys(response.items);
 }
 
 /**
