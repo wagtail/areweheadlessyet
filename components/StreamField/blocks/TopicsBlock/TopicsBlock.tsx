@@ -6,9 +6,9 @@ const TopicsBlock = ({ title, topics }: TopicsBlockProps) => (
     <>
         <h2>{title}</h2>
         <div className={styles.grid}>
-            {topics.map((topic, i) => {
-                return <TopicBlock key={i} {...topic} />;
-            })}
+            {topics.map((topic, i) => (
+                <TopicBlock key={i} {...topic} />
+            ))}
         </div>
     </>
 );
