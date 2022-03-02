@@ -30,6 +30,9 @@ async function getAreWeHeadlessYetHomePageID() {
         type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
     });
     const result = await response.json();
+    if (result.items.length === 0) {
+        throw new Error("Failed to fetch AreWeHeadlessYet home page's ID.");
+    }
     return result.items[0].id;
 }
 
@@ -37,8 +40,8 @@ async function getAreWeHeadlessYetHomePageID() {
  * Retrieves the AreWeHeadlessYet home page.
  */
 export async function getAreWeHeadlessYetHomePage() {
-    const HomePageID = await getAreWeHeadlessYetHomePageID();
-    let response = await fetchHelper(HomePageID, {});
+    const homePageID = await getAreWeHeadlessYetHomePageID();
+    let response = await fetchHelper(homePageID, {});
     response = await response.json();
     return humps.camelizeKeys(response);
 }
