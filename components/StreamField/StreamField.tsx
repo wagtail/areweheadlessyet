@@ -25,10 +25,10 @@ const StreamField = ({ body, topics }: StreamFieldProps) => {
                         </div>
                     );
                 }
-                const Block = BLOCKS[blockType as BlockType];
+                const BlockComponent = BLOCKS[blockType as BlockType];
                 return (
                     <div key={i} className={styles.section}>
-                        <Block {...block.value} />
+                        <BlockComponent {...block.value} />
                     </div>
                 );
             })}
