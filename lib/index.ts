@@ -2,6 +2,11 @@ import {
     getAreWeHeadlessYetHomePage,
     getAreWeHeadlessYetTopics,
 } from './fetch';
-import { getYear } from './utils';
+import { getYear, formatDate } from './utils';
 
-export { getAreWeHeadlessYetHomePage, getAreWeHeadlessYetTopics, getYear };
+export {
+    getAreWeHeadlessYetHomePage,
+    getAreWeHeadlessYetTopics,
+    getYear,
+    formatDate,
+};

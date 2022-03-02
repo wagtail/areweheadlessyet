@@ -1,12 +1,6 @@
-import type { BlogPostValue } from './types';
+import { formatDate } from '../../../../lib';
 import styles from './NewsBlock.module.scss';
-
-const DateOptions = { year: 'numeric', month: 'long', day: 'numeric' } as const;
-
-const formatDate = (date: string) => {
-    const dateObject = new Date(date);
-    return new Intl.DateTimeFormat(undefined, DateOptions).format(dateObject);
-};
+import type { BlogPostValue } from './types';
 
 export const PostBlock = ({
     date,

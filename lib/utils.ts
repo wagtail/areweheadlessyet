@@ -8,4 +8,18 @@ const getYear = (date: string): number => {
     return dateObject.getFullYear();
 };
 
-export { getYear };
+/**
+ * Formats a date to display.
+ * @param date - String representing a full date.
+ * @returns - A more user-friendly date format.
+ */
+const formatDate = (date: string) => {
+    const dateObject = new Date(date);
+    return new Intl.DateTimeFormat('en-GB', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    }).format(dateObject);
+};
+
+export { getYear, formatDate };
