@@ -5,6 +5,8 @@ import type {
 } from './types';
 
 const RichTextBlock = ({ value }: RichTextBlockItem) => (
+    // Use dangerouslySetInnerHTML for proper rendering of the 'value'
+    // which is defined as a RichTextField in the backend.
     <div dangerouslySetInnerHTML={{ __html: value }} />
 );
 
