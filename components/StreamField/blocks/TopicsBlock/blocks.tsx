@@ -7,7 +7,7 @@ import statusRed from '../../../../public/images/status-red.svg';
 import type { Topic } from './types';
 import styles from './TopicsBlock.module.scss';
 
-const StatusImages = {
+const statusImages = {
     green: statusGreen,
     red: statusRed,
     amber: statusAmber,
@@ -16,7 +16,7 @@ const StatusImages = {
 export const TopicBlock = ({ title, statusColor, introduction }: Topic) => (
     <div className={styles.card}>
         <div className={styles.card__status}>
-            <Image src={StatusImages[statusColor]} alt="" />
+            <Image src={statusImages[statusColor]} alt="" />
         </div>
         <h3 className={styles.card__title}>{title}</h3>
         <p className={styles.card__body}>{introduction}</p>
