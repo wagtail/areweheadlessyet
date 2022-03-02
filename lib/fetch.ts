@@ -1,5 +1,10 @@
 import humps from 'humps';
 
+/**
+ * Helper to fetch data from Wagtail's API.
+ * @param path - URl path.
+ * @param params - Mapping of query parameters.
+ */
 async function fetchHelper(path: string, params: { [key: string]: string }) {
     let headers = new Headers();
     if (process.env.INSTANCE === 'staging') {
@@ -17,6 +22,9 @@ async function fetchHelper(path: string, params: { [key: string]: string }) {
     );
 }
 
+/**
+ * Retrieves the ID of the AreWeHeadless home page for further API querying.
+ */
 async function getAreWeHeadlessYetHomePageID() {
     const response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
@@ -25,6 +33,9 @@ async function getAreWeHeadlessYetHomePageID() {
     return result.items[0].id;
 }
 
+/**
+ * Retrieves the AreWeHeadlessYet home page.
+ */
 export async function getAreWeHeadlessYetHomePage() {
     const HomePageID = await getAreWeHeadlessYetHomePageID();
     let response = await fetchHelper(HomePageID, {});
@@ -32,6 +43,9 @@ export async function getAreWeHeadlessYetHomePage() {
     return humps.camelizeKeys(response);
 }
 
+/**
+ * Retrieves all topics defined in the AreWeHeadlessYet backend.
+ */
 export async function getAreWeHeadlessYetTopics() {
     let response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
