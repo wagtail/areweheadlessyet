@@ -1,11 +1,7 @@
 import { AreWeHeadlessYetLogo } from '../../SVG';
+import { getYear } from '../../../lib';
 import styles from './Footer.module.scss';
 import type FooterProps from './types';
-
-function getYear(date: string) {
-    const dateObject = new Date(date);
-    return dateObject.getFullYear();
-}
 
 export const Footer = ({ lastPublishedAt }: FooterProps) => (
     <footer className={styles.footer}>
