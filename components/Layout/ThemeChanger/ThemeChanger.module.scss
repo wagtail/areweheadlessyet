@@ -40,7 +40,6 @@
             right: 0;
             bottom: 0;
             background: var(--color--toggle-background);
-            -webkit-transition: 0.4s;
             transition: 0.4s;
 
             &:before {
@@ -48,7 +47,6 @@
                 content: url('../../../public/images/moon.png');
                 left: 4px;
                 bottom: 0;
-                -webkit-transition: 0.4s;
                 transition: 0.4s;
             }
         }

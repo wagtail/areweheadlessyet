@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import styles from './ThemeChanger.module.scss';
 
 export const ThemeChanger = () => {
+    // This is done to avoid hydration mismatch error.
+    // See https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch.
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 
@@ -12,14 +14,14 @@ export const ThemeChanger = () => {
         return null;
     }
 
-    const toggle = () =>
+    const toggleTheme = () =>
         theme === 'light' ? setTheme('dark') : setTheme('light');
 
     return (
         <div className={styles.container}>
             <span
                 className={`${styles.switch_night} ${
-                    theme === 'light' ? styles.light : ''
+                    theme === 'light' && styles.light
                 }`}
             >
                 Night
@@ -27,14 +29,14 @@ export const ThemeChanger = () => {
             <label className={styles.switch}>
                 <input
                     type="checkbox"
-                    onClick={toggle}
-                    defaultChecked={theme === 'light' ? true : false}
+                    onClick={toggleTheme}
+                    defaultChecked={theme === 'light'}
                 />
                 <span className={styles.slider} />
             </label>
             <span
                 className={`${styles.switch_day} ${
-                    theme === 'light' ? styles.light : ''
+                    theme === 'light' && styles.light
                 }`}
             >
                 Day
