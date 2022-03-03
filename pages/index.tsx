@@ -11,17 +11,15 @@ import StreamField from '../components/StreamField';
 const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
     page,
     topics,
-}) => {
-    return (
-        <Layout
-            title="Are we headless yet? | Wagtail"
-            lastPublishedAt={page.lastPublishedAt}
-        >
-            <HomeHero icon={page.straplineIcon} text={page.straplineText} />
-            <StreamField body={page.body} topics={topics.items} />
-        </Layout>
-    );
-};
+}) => (
+    <Layout
+        title="Are we headless yet? | Wagtail"
+        lastPublishedAt={page.lastPublishedAt}
+    >
+        <HomeHero icon={page.straplineIcon} text={page.straplineText} />
+        <StreamField body={page.body} topics={topics.items} />
+    </Layout>
+);
 
 export async function getStaticProps() {
     const page = await getAreWeHeadlessYetHomePage();

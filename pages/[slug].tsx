@@ -11,14 +11,12 @@ import Layout from '../components/Layout';
 import TopicPageHero from '../components/TopicPageHero/TopicPageHero';
 import StreamField from '../components/StreamField';
 
-const TopicPage: NextPage<{ page: AreWeHeadlessYetTopicPage }> = ({ page }) => {
-    return (
-        <Layout title={page.title} lastPublishedAt={page.lastPublishedAt}>
-            <TopicPageHero {...page} />
-            <StreamField body={page.body} />
-        </Layout>
-    );
-};
+const TopicPage: NextPage<{ page: AreWeHeadlessYetTopicPage }> = ({ page }) => (
+    <Layout title={page.title} lastPublishedAt={page.lastPublishedAt}>
+        <TopicPageHero {...page} />
+        <StreamField body={page.body} />
+    </Layout>
+);
 
 export async function getStaticPaths() {
     const topics = await getAreWeHeadlessYetTopicPages();
