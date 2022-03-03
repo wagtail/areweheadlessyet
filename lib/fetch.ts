@@ -36,10 +36,12 @@ async function getAreWeHeadlessYetHomePageID() {
     const response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
     });
-    if (response.items.length === 0) {
+
+    const items = response.items;
+    if (items.length === 0) {
         throw new Error("Failed to fetch AreWeHeadlessYet home page's ID.");
     }
-    return response.items[0].id;
+    return items[0].id;
 }
 
 /**
@@ -83,5 +85,10 @@ export async function getAreWeHeadlessYetTopicPage(slug: string) {
         slug: slug,
         fields: '*',
     });
-    return humps.camelizeKeys(response.items[0]);
+
+    const items = response.items;
+    if (items.length === 0) {
+        throw new Error(`Failed to fetch the ${slug} topic page.`);
+    }
+    return humps.camelizeKeys(items[0]);
 }
