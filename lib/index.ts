@@ -5,14 +5,14 @@ import {
     getAreWeHeadlessYetTopicPages,
 } from './fetch';
 import { getYear, formatDate } from './utils';
-import getTopicStatusImage from './topics';
+import topicStatusImages from './topics';
 
 export {
     getAreWeHeadlessYetHomePage,
     getAreWeHeadlessYetTopics,
     getAreWeHeadlessYetTopicPage,
     getAreWeHeadlessYetTopicPages,
-    getTopicStatusImage,
     getYear,
     formatDate,
+    topicStatusImages,
 };

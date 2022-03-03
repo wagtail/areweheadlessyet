@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import styles from './TopicPageHero.module.scss';
-import { getTopicStatusImage } from '../../lib';
+import { topicStatusImages } from '../../lib';
 import { AreWeHeadlessYetTopicPage } from '../types';
 import { HeadlessBird } from '../SVG';
 
@@ -17,7 +17,7 @@ export const TopicPageHero = ({
         <div className={styles.hero__content}>
             <div className={styles.hero__status}>
                 <Image
-                    src={getTopicStatusImage(statusColor)}
+                    src={topicStatusImages[statusColor]}
                     alt=""
                     layout="responsive"
                 />
