@@ -30,10 +30,7 @@ const StreamField = ({ body, topics }: StreamFieldProps) => {
                 if (blockType === 'text') {
                     return (
                         <div key={i} className={styles.text}>
-                            <RichTextBlock
-                                key={i}
-                                {...(block as RichTextBlockItem)}
-                            />
+                            <RichTextBlock {...(block as RichTextBlockItem)} />
                         </div>
                     );
                 }
