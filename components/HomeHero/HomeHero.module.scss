@@ -20,13 +20,14 @@
     height: 135px;
 
     @include media-query(medium) {
+        display: flex;
+        align-self: flex-end;
+        margin-right: 1.5rem;
         width: 171px;
         height: 180px;
     }
 
     @include media-query(large) {
-        align-self: flex-end;
-        margin-right: 1.5rem;
         width: 213px;
         height: 225px;
     }
@@ -36,9 +37,13 @@
     margin-top: 4rem;
     width: 100%;
 
+    @include media-query(medium) {
+        width: auto;
+        display: flex;
+    }
+
     @include media-query(large) {
         margin-top: 7.5rem;
-        display: flex;
         margin-bottom: 4rem;
     }
 
@@ -48,10 +53,6 @@
         left: -5px;
 
         @include media-query(medium) {
-            top: -50px;
-        }
-
-        @include media-query(large) {
             top: 0;
             left: 0;
         }
