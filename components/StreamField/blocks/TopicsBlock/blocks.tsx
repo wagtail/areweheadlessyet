@@ -1,24 +1,26 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-import statusGreen from '../../../../public/images/status-green.svg';
-import statusAmber from '../../../../public/images/status-amber.svg';
-import statusRed from '../../../../public/images/status-red.svg';
+import { topicStatusImages } from '../../../../lib';
 
 import type { Topic } from './types';
 import styles from './TopicsBlock.module.scss';
 
-const statusImages = {
-    green: statusGreen,
-    red: statusRed,
-    amber: statusAmber,
-};
-
-export const TopicBlock = ({ title, statusColor, introduction }: Topic) => (
+export const TopicBlock = ({
+    meta,
+    title,
+    statusColor,
+    introduction,
+}: Topic) => (
     <div className={styles.card}>
         <div className={styles.card__status}>
-            <Image src={statusImages[statusColor]} alt="" />
+            <Image src={topicStatusImages[statusColor]} alt="" />
         </div>
-        <h3 className={styles.card__title}>{title}</h3>
+        <h3 className={styles.card__title}>
+            <Link href={`/${meta.slug}`}>
+                <a>{title}</a>
+            </Link>
+        </h3>
         <p className={styles.card__body}>{introduction}</p>
     </div>
 );

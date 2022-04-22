@@ -1,3 +1,4 @@
 import SectionBlock from './SectionBlock';
+import { RichTextBlock } from './blocks';
 
-export default SectionBlock;
+export { SectionBlock as default, RichTextBlock };

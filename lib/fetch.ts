@@ -1,4 +1,5 @@
 import humps from 'humps';
+import type { Topic } from '../components/StreamField/blocks/TopicsBlock';
 
 /**
  * Helper to fetch data from Wagtail's API.
@@ -15,11 +16,17 @@ async function fetchHelper(path: string, params: { [key: string]: string }) {
             ).toString('base64');
         headers.append('Authorization', auth);
     }
-    return await fetch(
+    const response = await fetch(
         `${process.env.BASE_URL}api/v2/pages/${path}?` +
             new URLSearchParams(params),
         { headers: headers },
     );
+
+    if (!response.ok) {
+        throw new Error(response.statusText);
+    }
+
+    return await response.json();
 }
 
 /**
@@ -29,11 +36,12 @@ async function getAreWeHeadlessYetHomePageID() {
     const response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetHomePage',
     });
-    const result = await response.json();
-    if (result.items.length === 0) {
+
+    const items = response.items;
+    if (items.length === 0) {
         throw new Error("Failed to fetch AreWeHeadlessYet home page's ID.");
     }
-    return result.items[0].id;
+    return items[0].id;
 }
 
 /**
@@ -41,8 +49,7 @@ async function getAreWeHeadlessYetHomePageID() {
  */
 export async function getAreWeHeadlessYetHomePage() {
     const homePageID = await getAreWeHeadlessYetHomePageID();
-    let response = await fetchHelper(homePageID, {});
-    response = await response.json();
+    const response = await fetchHelper(homePageID, {});
     return humps.camelizeKeys(response);
 }
 
@@ -50,10 +57,38 @@ export async function getAreWeHeadlessYetHomePage() {
  * Retrieves all topics defined in the AreWeHeadlessYet backend.
  */
 export async function getAreWeHeadlessYetTopics() {
-    let response = await fetchHelper('', {
+    const response = await fetchHelper('', {
         type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
         fields: 'title,status_color,introduction',
     });
-    response = await response.json();
     return humps.camelizeKeys(response);
+}
+
+/**
+ * Retrieves all topic pages from the AreWeHeadlessYet backend.
+ */
+export async function getAreWeHeadlessYetTopicPages() {
+    const response = await fetchHelper('', {
+        type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
+        fields: '*',
+    });
+    return <Topic[]>humps.camelizeKeys(response.items);
+}
+
+/**
+ * Retrieves a topic's page.
+ * @param slug - Topic's slug
+ */
+export async function getAreWeHeadlessYetTopicPage(slug: string) {
+    const response = await fetchHelper('', {
+        type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
+        slug: slug,
+        fields: '*',
+    });
+
+    const items = response.items;
+    if (items.length === 0) {
+        throw new Error(`Failed to fetch the ${slug} topic page.`);
+    }
+    return humps.camelizeKeys(items[0]);
 }
