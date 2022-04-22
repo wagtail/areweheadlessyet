@@ -1,16 +1,17 @@
 $font--primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
-$breakpoints: ('medium' '(min-width: 600px)', 'large' '(min-width: 1023px)');
+$breakpoints: ('medium' '(min-width: 600px)', 'large' '(min-width: 1161px)');
 
 // Font sizes
-$small-font-size: 16px;
-$medium-font-size: 18px;
-$large-font-size: 20px;
+$small-font-size: 15px;
+$medium-font-size: 17px;
+$large-font-size: 19px;
 
 $font-sizes: (
+    xxxxxl: 7rem,
     xxxxl: 4rem,
-    xxxl: 3rem,
+    xxxl: 2.5rem,
     xxl: 2rem,
     xl: 1.875rem,
     l: 1.5rem,

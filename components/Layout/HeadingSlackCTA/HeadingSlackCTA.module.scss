@@ -3,27 +3,35 @@
     align-items: center;
     position: absolute;
     top: 1rem;
+    right: -1rem;
     color: inherit;
 
     @include media-query(large) {
-        right: 0;
+        .break {
+            display: none;
+        }
+    }
+
+    .logo {
+        width: 31px;
+        height: 31px;
     }
 
     .cta {
-        display: flex;
-        flex-direction: row;
+        @include font-size(xs);
         margin-left: 0.5rem;
         line-height: 1.2;
         font-weight: $weight--extrabold;
 
         @include media-query(large) {
+            display: flex;
             flex-direction: column;
         }
 
         &__tag {
             color: var(--color--accent);
             font-weight: inherit;
-            margin: 0 0.1rem;
+            margin: 0 0.2rem;
 
             @include media-query(large) {
                 margin: 0;

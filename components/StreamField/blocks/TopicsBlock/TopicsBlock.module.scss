@@ -1,0 +1,44 @@
+.grid {
+    display: grid;
+
+    @include media-query(large) {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 -10rem;
+    }
+}
+
+.card {
+    padding-bottom: 1rem;
+
+    @include media-query(large) {
+        padding: 0.5rem 1.75rem;
+    }
+
+    &__title {
+        @include font-size(m);
+        font-weight: $weight--extrabold;
+        line-height: 1.25;
+        margin: 0;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &__body {
+        @include font-size(s);
+        line-height: 1.5;
+        opacity: 0.7;
+        margin-top: 0.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @include media-query(large) {
+            @include font-size(xxs);
+        }
+    }
+}

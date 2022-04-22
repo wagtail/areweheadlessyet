@@ -1,107 +1,31 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
-import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
-import HeadingSlackCTA from '../components/HeadingSlackCTA';
-import FooterSlackCTA from '../components/FooterSlackCTA';
-import Footer from '../components/Footer';
+import type { AreWeHeadlessYetHomePage } from '../components/types';
+import type { Topics } from '../components/StreamField/blocks/TopicsBlock';
 
-const Home: NextPage = () => {
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>Are we headless yet? | Wagtail</title>
-                <link rel="icon" href="/favicon.ico" />
-                <link
-                    rel="preload"
-                    href="/fonts/inter/inter-regular.woff2"
-                    as="font"
-                    crossOrigin=""
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/inter/inter-bold.woff2"
-                    as="font"
-                    crossOrigin=""
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/inter/inter-black.woff2"
-                    as="font"
-                    crossOrigin=""
-                />
-            </Head>
+import { getAreWeHeadlessYetHomePage, getAreWeHeadlessYetTopics } from '../lib';
 
-            <main className={styles.main}>
-                <HeadingSlackCTA />
-                <div className={styles.hero}>
-                    <div className={styles.logo}>
-                        <Image
-                            src="/images/headless-logo.svg"
-                            alt=""
-                            width={140}
-                            height={160}
-                        />
-                    </div>
-                    <div className={styles.hero__body}>
-                        <h1 className={styles.title}>
-                            Are we <br />
-                            <strong className={styles.title__emphasis}>
-                                headless
-                            </strong>{' '}
-                            yet?
-                        </h1>
-                        <p className={styles.description}>
-                            👍 Yes! But there's plenty we could improve for
-                            Wagtail's developers
-                        </p>
-                    </div>
-                </div>
+import Layout from '../components/Layout';
+import HomeHero from '../components/HomeHero';
+import StreamField from '../components/StreamField';
 
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>
-                            Find in-depth information about Next.js features and
-                            API.
-                        </p>
-                    </a>
+const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
+    page,
+    topics,
+}) => (
+    <Layout
+        title="Are we headless yet? | Wagtail"
+        lastPublishedAt={page.lastPublishedAt}
+    >
+        <HomeHero icon={page.straplineIcon} text={page.straplineText} />
+        <StreamField body={page.body} topics={topics.items} />
+    </Layout>
+);
 
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>
-                            Learn about Next.js in an interactive course with
-                            quizzes!
-                        </p>
-                    </a>
+export async function getStaticProps() {
+    const page = await getAreWeHeadlessYetHomePage();
+    const topics = await getAreWeHeadlessYetTopics();
 
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h2>Examples &rarr;</h2>
-                        <p>
-                            Discover and deploy boilerplate example Next.js
-                            projects.
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h2>Deploy &rarr;</h2>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL
-                            with Vercel.
-                        </p>
-                    </a>
-                </div>
-                <FooterSlackCTA />
-                <Footer />
-            </main>
-        </div>
-    );
-};
+    return { props: { page: page, topics: topics } };
+}
 
 export default Home;

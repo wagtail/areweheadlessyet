@@ -1,8 +1,7 @@
 .footer {
-    padding: 2rem 0;
+    padding: 3rem 5rem 1rem 0;
     position: relative;
     line-height: 1.5;
-    text-align: center;
     width: 100%;
     overflow: hidden;
 
@@ -22,11 +21,10 @@
     }
 
     &__text {
-        @include font-size(xs);
+        @include font-size(xxs);
         display: flex;
         flex-direction: column;
         position: relative;
-        z-index: 1;
 
         @include media-query(medium) {
             flex-direction: row;
@@ -46,13 +44,8 @@
         transform: rotate(159.81deg);
         position: absolute;
         right: 0;
-        top: 0;
-        z-index: 0;
-        opacity: 0.5;
-
-        @include media-query(medium) {
-            position: relative;
-            opacity: initial;
-        }
+        bottom: -1rem;
+        width: 84px;
+        height: 88px;
     }
 }

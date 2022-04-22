@@ -1,0 +1,55 @@
+.container {
+    @include media-query(large) {
+        margin: 0 calc(5rem + 80px);
+    }
+}
+
+.text {
+    line-height: 1.5;
+
+    @include media-query(medium) {
+        margin: 0 4rem;
+    }
+}
+
+.text {
+    line-height: 1.5;
+
+    @include media-query(medium) {
+        margin: 0 4rem;
+    }
+}
+
+.section {
+    position: relative;
+    margin: 5rem 0;
+    line-height: 1.5;
+
+    @include media-query(medium) {
+        margin: 4rem;
+    }
+
+    > h2 {
+        @include font-size(xxxl);
+        font-weight: $weight--extrabold;
+        line-height: 1;
+        margin: 1.25rem 0;
+        max-width: 224px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2rem;
+        left: -2.5rem;
+        width: 50px;
+        border: 3px solid var(--color--accent);
+        border-radius: 2px;
+        transform: rotate(-3.58deg);
+
+        @include media-query(medium) {
+            top: 1rem;
+            left: -4rem;
+        }
+    }
+}
