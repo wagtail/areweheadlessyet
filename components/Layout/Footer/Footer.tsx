@@ -2,6 +2,7 @@ import { AreWeHeadlessYetLogo } from '../../SVG';
 import { getYear } from '../../../lib';
 import styles from './Footer.module.scss';
 import type FooterProps from './types';
+import variables from '../../../styles/variables.module.scss';
 
 export const Footer = ({ lastPublishedAt }: FooterProps) => (
     <footer className={styles.footer}>
@@ -21,7 +22,7 @@ export const Footer = ({ lastPublishedAt }: FooterProps) => (
             </div>
         </div>
         <div className={styles.logo}>
-            <AreWeHeadlessYetLogo color="#3BECCD" />
+            <AreWeHeadlessYetLogo color={variables.accentColor} />
         </div>
     </footer>
 );

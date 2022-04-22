@@ -7,6 +7,15 @@
     --color--background: var(--color--purple);
     --color--accent: var(--color--lagoon);
     --color--link: var(--color--lagoon);
+    --color--toggle-background: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='light'] {
+    --color--text: #183153;
+    --color--background: var(--color--white);
+    --color--accent: #a55a75;
+    --color--link: #a55a75;
+    --color--toggle-background: rgba(24, 49, 83, 0.1);
 }
 
 html,

@@ -12,6 +12,14 @@
     }
 }
 
+.text {
+    line-height: 1.5;
+
+    @include media-query(medium) {
+        margin: 0 4rem;
+    }
+}
+
 .section {
     position: relative;
     margin: 5rem 0;

@@ -4,6 +4,7 @@ import type LayoutProps from './types';
 import HeadingSlackCTA from './HeadingSlackCTA';
 import FooterSlackCTA from './FooterSlackCTA';
 import Footer from './Footer';
+import ThemeChanger from './ThemeChanger';
 
 const Layout = ({ title, children, lastPublishedAt }: LayoutProps) => (
     <>
@@ -31,6 +32,7 @@ const Layout = ({ title, children, lastPublishedAt }: LayoutProps) => (
         </Head>
         <div className={styles.container}>
             <main className={styles.main}>
+                <ThemeChanger />
                 <HeadingSlackCTA />
                 {children}
                 <FooterSlackCTA />
