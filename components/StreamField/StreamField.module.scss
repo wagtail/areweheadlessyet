@@ -1,22 +1,8 @@
-.container {
+.text {
+    line-height: 1.5;
+
     @include media-query(large) {
-        margin: 0 calc(5rem + 80px);
-    }
-}
-
-.text {
-    line-height: 1.5;
-
-    @include media-query(medium) {
-        margin: 0 4rem;
-    }
-}
-
-.text {
-    line-height: 1.5;
-
-    @include media-query(medium) {
-        margin: 0 4rem;
+        margin: 0 calc(2rem + 80px);
     }
 }
 
@@ -27,6 +13,7 @@
 
     @include media-query(medium) {
         margin: 4rem;
+        margin-left: calc(2rem + 80px);
     }
 
     > h2 {

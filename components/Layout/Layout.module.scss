@@ -1,7 +1,6 @@
 .container {
     padding: 0 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .main {
@@ -10,6 +9,15 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
+
+    @include media-query(large) {
+        padding: 4rem;
+        padding-bottom: 0;
+    }
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
 }
