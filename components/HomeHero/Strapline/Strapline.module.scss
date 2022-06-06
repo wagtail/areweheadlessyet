@@ -1,13 +1,18 @@
 .strapline {
     @include font-size(m);
     display: flex;
-    flex-direction: row;
-    line-height: 0.75;
+    flex-direction: column;
     margin-bottom: 0;
     margin-top: 2rem;
+    line-height: 1.5;
 
-    @include media-query(large) {
+    @include media-query(medium) {
         @include font-size(l);
+        flex-direction: row;
+        align-items: center;
+        line-height: 0.75;
+        letter-spacing: -1px;
+        margin-top: 4rem;
     }
 
     &__text p {
