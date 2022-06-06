@@ -14,7 +14,7 @@ import StreamField from '../components/StreamField';
 const TopicPage: NextPage<{ page: AreWeHeadlessYetTopicPage }> = ({ page }) => (
     <Layout title={page.title} lastPublishedAt={page.lastPublishedAt}>
         <TopicPageHero {...page} />
-        <StreamField body={page.body} className="container__topics-page" />
+        <StreamField body={page.body} className="container--topic-page" />
     </Layout>
 );
 

@@ -20,7 +20,7 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
         <StreamField
             body={page.body}
             topics={topics.items}
-            className="container__home-page"
+            className="container--home-page"
         />
     </Layout>
 );
