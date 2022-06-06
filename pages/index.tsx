@@ -17,7 +17,11 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
         lastPublishedAt={page.lastPublishedAt}
     >
         <HomeHero icon={page.straplineIcon} text={page.straplineText} />
-        <StreamField body={page.body} topics={topics.items} className="container__home-page"/>
+        <StreamField
+            body={page.body}
+            topics={topics.items}
+            className="container__home-page"
+        />
     </Layout>
 );
 

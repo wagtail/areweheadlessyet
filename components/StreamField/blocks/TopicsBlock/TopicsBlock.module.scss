@@ -1,9 +1,10 @@
 .grid {
     display: grid;
 
-    @include media-query(large) {
+    @include media-query(medium) {
         grid-template-columns: repeat(4, 1fr);
-        margin: 0 -10rem;
+        column-gap: 1%;
+        margin: 0 min(-10rem, -25%);
     }
 }
 

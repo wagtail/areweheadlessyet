@@ -23,6 +23,7 @@ async function fetchHelper(path: string, params: { [key: string]: string }) {
     );
 
     if (!response.ok) {
+        console.log(response);
         throw new Error(response.statusText);
     }
 

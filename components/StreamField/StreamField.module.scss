@@ -1,20 +1,31 @@
+.container {
+    @include media-query(medium) {
+        &__home-page {
+            margin-left: calc(1.5rem + 171px);
+            margin-right: min(10rem, 1.5rem + 171px);
+        }
+        &__topic-page {
+            margin: 0 calc(2rem + 80px);
+        }
+    }
+    @include media-query(large) {
+        &__home-page {
+            margin-left: calc(1.5rem + 213px);
+            margin-right: min(10rem, 1.5rem + 213px);
+        }
+        &__topic-page {
+            margin: 0 calc(2rem + 80px);
+        }
+    }
+}
+
 .text {
     line-height: 1.5;
-
-    @include media-query(large) {
-        margin: 0 calc(2rem + 80px);
-    }
 }
 
 .section {
     position: relative;
-    margin: 5rem 0;
     line-height: 1.5;
-
-    @include media-query(medium) {
-        margin: 4rem;
-        margin-left: calc(2rem + 80px);
-    }
 
     > h2 {
         @include font-size(xxxl);
