@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './TopicPageHero.module.scss';
 import { topicStatusImages } from '../../lib';
@@ -13,7 +14,11 @@ export const TopicPageHero = ({
 }: AreWeHeadlessYetTopicPage) => (
     <div className={styles.hero}>
         <div className={styles.logo}>
-            <HeadlessBird color={variables.textColor} />
+            <Link href="/">
+                <a>
+                    <HeadlessBird color={variables.textColor} />
+                </a>
+            </Link>
         </div>
         <div className={styles.hero__content}>
             <div className={styles.hero__status}>
