@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { AreWeHeadlessYetLogo } from '../../SVG';
 import { getYear } from '../../../lib';
 import styles from './Footer.module.scss';
@@ -22,7 +24,11 @@ export const Footer = ({ lastPublishedAt }: FooterProps) => (
             </div>
         </div>
         <div className={styles.logo}>
-            <AreWeHeadlessYetLogo color={variables.accentColor} />
+            <Link href="/">
+                <a>
+                    <AreWeHeadlessYetLogo color={variables.accentColor} />
+                </a>
+            </Link>
         </div>
     </footer>
 );
