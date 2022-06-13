@@ -6,10 +6,44 @@ import FooterSlackCTA from './FooterSlackCTA';
 import SubFooter from './SubFooter';
 import ThemeChanger from './ThemeChanger';
 
-const Layout = ({ title, children, lastPublishedAt }: LayoutProps) => (
+const Layout = ({ title, meta, lastPublishedAt, children }: LayoutProps) => (
     <>
         <Head>
             <title>{title}</title>
+            <meta
+                name="description"
+                content={meta.searchDescription as string}
+            />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+            />
+
+            <meta property="og:type" content="website" />
+            <meta
+                property="og:url"
+                content={`https://areweheadlessyet.wagtail.org/${
+                    meta.slug !== 'are-we-headless-yet' ? meta.slug : ''
+                }`}
+            />
+            <meta
+                property="og:title"
+                content={meta.seoTitle ? (meta.seoTitle as string) : title}
+            />
+            <meta property="og:image" content={meta.socialImageUrl as string} />
+            <meta
+                property="og:description"
+                content={
+                    meta.socialText
+                        ? (meta.socialText as string)
+                        : (meta.searchDescription as string)
+                }
+            />
+            <meta
+                property="og:site_name"
+                content="Are We Headless Yet - Wagtail CMS"
+            />
+
             <link rel="icon" href="/favicon.ico" />
             <link
                 rel="preload"

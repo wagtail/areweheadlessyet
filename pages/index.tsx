@@ -14,6 +14,7 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
 }) => (
     <Layout
         title="Are we headless yet? Yes! | Wagtail"
+        meta={page.meta}
         lastPublishedAt={page.lastPublishedAt}
     >
         <HomeHero icon={page.straplineIcon} text={page.straplineText} />
