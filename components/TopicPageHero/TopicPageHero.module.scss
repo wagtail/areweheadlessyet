@@ -1,22 +1,18 @@
 .hero {
-    margin-bottom: 0;
+    margin: 0;
+    max-width: 600px;
 
     @include media-query(medium) {
-        margin: 0 4rem;
-        margin-bottom: 0;
-    }
-
-    @include media-query(large) {
         flex-direction: row;
-        margin: 5rem;
-        margin-bottom: 0;
+        margin-top: 5rem;
+        max-width: 900px;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
 
-        @include media-query(large) {
+        @include media-query(medium) {
             flex-direction: row;
         }
     }
@@ -30,10 +26,10 @@
         position: relative;
         margin: 3rem 0 3rem 1rem;
 
-        @include media-query(large) {
+        @include media-query(medium) {
             width: 81px;
             margin: 0;
-            margin-left: calc(80px + 4rem);
+            margin-left: calc(80px + 2rem);
         }
 
         &:before {
@@ -62,9 +58,8 @@
     &__title {
         @include font-size(xxxl);
         font-weight: $weight--extrabold;
-        line-height: 0.95;
-        letter-spacing: -2px;
-        max-width: 700px;
+        line-height: 1;
+        letter-spacing: -1px;
         margin: 1rem 0;
 
         @include media-query(large) {
@@ -83,9 +78,10 @@
         width: 50px;
         flex-shrink: 0;
 
-        @include media-query(large) {
+        @include media-query(medium) {
             width: 80px;
             margin: 2rem;
+            margin-left: 0;
         }
     }
 }

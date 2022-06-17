@@ -2,30 +2,23 @@
     @include font-size(m);
     display: flex;
     flex-direction: column;
-    line-height: 1.5;
     margin-bottom: 0;
     margin-top: 2rem;
+    line-height: 1.5;
 
-    @include media-query(large) {
+    @include media-query(medium) {
         @include font-size(l);
-        line-height: 0.75;
-        letter-spacing: -1px;
         flex-direction: row;
         align-items: center;
-        margin-top: 4rem;
+        line-height: 0.75;
+        letter-spacing: -1px;
     }
 
-    &__text {
-        flex-shrink: 0;
-
-        p {
-            margin: 0;
-        }
+    &__text p {
+        margin: 0;
     }
 
     &__icon {
-        @include font-size(l);
-        flex-shrink: 0;
         margin-right: 0.2rem;
     }
 }

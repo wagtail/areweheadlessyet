@@ -11,13 +11,13 @@ const BLOCKS = {
 } as const;
 type BlockType = keyof typeof BLOCKS;
 
-const StreamField = ({ body, topics }: StreamFieldProps) => {
+const StreamField = ({ body, topics, className }: StreamFieldProps) => {
     if (!body) {
         return null;
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles[className]}>
             {body.map((block, i) => {
                 const blockType = block.type;
                 if (blockType === 'topics') {

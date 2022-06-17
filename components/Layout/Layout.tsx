@@ -34,7 +34,7 @@ const Layout = ({ title, children, lastPublishedAt }: LayoutProps) => (
             <main className={styles.main}>
                 <ThemeChanger />
                 <HeadingSlackCTA />
-                {children}
+                <div className={styles.content}>{children}</div>
                 <FooterSlackCTA />
                 <Footer lastPublishedAt={lastPublishedAt} />
             </main>
