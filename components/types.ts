@@ -7,9 +7,17 @@ export default interface StreamFieldBlock {
     id: string;
 }
 
+export interface AreWeHeadlessYetPageMeta {
+    slug: string;
+    searchDescription: string;
+    seoTitle?: string;
+    socialImageUrl?: string;
+    socialText?: string;
+}
+
 export interface AreWeHeadlessYetHomePage {
     id: number;
-    meta: { [key: string]: string | boolean | null };
+    meta: AreWeHeadlessYetPageMeta;
     title: string;
     lastPublishedAt: string;
     straplineIcon: IconChoice;
@@ -19,7 +27,7 @@ export interface AreWeHeadlessYetHomePage {
 
 export interface AreWeHeadlessYetTopicPage {
     id: number;
-    meta: { [key: string]: string | boolean | null };
+    meta: AreWeHeadlessYetPageMeta;
     title: string;
     lastPublishedAt: string;
     statusColor: StatusColorChoice;

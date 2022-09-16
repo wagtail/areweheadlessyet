@@ -1,15 +1,9 @@
-type LayoutMeta = {
-    slug: string;
-    searchDescription: string;
-    seoTitle?: string;
-    socialImageUrl?: string;
-    socialText?: string;
-};
+import { AreWeHeadlessYetPageMeta } from '../types';
 
 type LayoutProps = {
     title: string;
     lastPublishedAt: string;
-    meta: LayoutMeta;
+    meta: AreWeHeadlessYetPageMeta;
     children?: React.ReactNode;
 };
 
