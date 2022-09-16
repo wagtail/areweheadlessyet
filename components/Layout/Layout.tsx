@@ -10,10 +10,7 @@ const Layout = ({ title, meta, lastPublishedAt, children }: LayoutProps) => (
     <>
         <Head>
             <title>{title}</title>
-            <meta
-                name="description"
-                content={meta.searchDescription as string}
-            />
+            <meta name="description" content={meta.searchDescription} />
             <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1"
@@ -28,15 +25,13 @@ const Layout = ({ title, meta, lastPublishedAt, children }: LayoutProps) => (
             />
             <meta
                 property="og:title"
-                content={meta.seoTitle ? (meta.seoTitle as string) : title}
+                content={meta.seoTitle ? meta.seoTitle : title}
             />
-            <meta property="og:image" content={meta.socialImageUrl as string} />
+            <meta property="og:image" content={meta.socialImageUrl} />
             <meta
                 property="og:description"
                 content={
-                    meta.socialText
-                        ? (meta.socialText as string)
-                        : (meta.searchDescription as string)
+                    meta.socialText ? meta.socialText : meta.searchDescription
                 }
             />
             <meta
