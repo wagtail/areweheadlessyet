@@ -6,103 +6,107 @@ import FooterSlackCTA from './FooterSlackCTA';
 import SubFooter from './SubFooter';
 import ThemeChanger from './ThemeChanger';
 
-const Layout = ({ title, meta, lastPublishedAt, children }: LayoutProps) => (
-    <>
-        <Head>
-            <title>{title}</title>
-            <meta name="description" content={meta.searchDescription} />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-            />
+const Layout = ({ title, meta, lastPublishedAt, children }: LayoutProps) => {
+    const metaTitle = meta.seoTitle ? meta.seoTitle : title;
+    const metaDescription = meta.socialText
+        ? meta.socialText
+        : meta.searchDescription;
+    const metaURL = `https://areweheadlessyet.wagtail.org/${
+        meta.slug !== 'are-we-headless-yet' ? meta.slug : ''
+    }`;
 
-            <meta property="og:type" content="website" />
-            <meta
-                property="og:url"
-                content={`https://areweheadlessyet.wagtail.org/${
-                    meta.slug !== 'are-we-headless-yet' ? meta.slug : ''
-                }`}
-            />
-            <meta
-                property="og:title"
-                content={meta.seoTitle ? meta.seoTitle : title}
-            />
-            <meta property="og:image" content={meta.socialImageUrl} />
-            <meta
-                property="og:description"
-                content={
-                    meta.socialText ? meta.socialText : meta.searchDescription
-                }
-            />
-            <meta
-                property="og:site_name"
-                content="Are We Headless Yet - Wagtail CMS"
-            />
+    return (
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta name="description" content={meta.searchDescription} />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
 
-            <link
-                rel="apple-touch-icon"
-                sizes="180x180"
-                href="/favicons/apple-touch-icon.png"
-            />
-            <link
-                rel="icon"
-                type="image/png"
-                sizes="32x32"
-                href="/favicons/favicon-32x32.png"
-            />
-            <link
-                rel="icon"
-                type="image/png"
-                sizes="16x16"
-                href="/favicons/favicon-16x16.png"
-            />
-            <link rel="manifest" href="/favicons/site.webmanifest" />
-            <link
-                rel="mask-icon"
-                href="/favicons/safari-pinned-tab.svg"
-                color="#5bbad5"
-            />
-            <link rel="shortcut icon" href="/favicons/favicon.ico" />
-            <meta name="msapplication-TileColor" content="#2b5797" />
-            <meta
-                name="msapplication-config"
-                content="/favicons/browserconfig.xml"
-            />
-            <meta name="theme-color" content="#ffffff" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={metaURL} />
+                <meta property="og:title" content={metaTitle} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:image" content={meta.socialImageUrl} />
+                <meta
+                    property="og:site_name"
+                    content="Are We Headless Yet - Wagtail CMS"
+                />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={metaURL} />
+                <meta property="twitter:title" content={metaTitle} />
+                <meta
+                    property="twitter:description"
+                    content={metaDescription}
+                />
+                <meta property="twitter:image" content={meta.socialImageUrl} />
 
-            <link
-                rel="preload"
-                href="/fonts/inter/inter-regular.woff2"
-                as="font"
-                crossOrigin=""
-            />
-            <link
-                rel="preload"
-                href="/fonts/inter/inter-bold.woff2"
-                as="font"
-                crossOrigin=""
-            />
-            <link
-                rel="preload"
-                href="/fonts/inter/inter-black.woff2"
-                as="font"
-                crossOrigin=""
-            />
-        </Head>
-        <div className={styles.container}>
-            <header className={styles.header}>
-                <HeadingSlackCTA />
-                <ThemeChanger />
-            </header>
-            <main className={styles.main}>
-                <div className={styles.content}>{children}</div>
-            </main>
-            <footer className={styles.footer}>
-                <FooterSlackCTA />
-                <SubFooter lastPublishedAt={lastPublishedAt} />
-            </footer>
-        </div>
-    </>
-);
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/favicons/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicons/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicons/favicon-16x16.png"
+                />
+                <link rel="manifest" href="/favicons/site.webmanifest" />
+                <link
+                    rel="mask-icon"
+                    href="/favicons/safari-pinned-tab.svg"
+                    color="#5bbad5"
+                />
+                <link rel="shortcut icon" href="/favicons/favicon.ico" />
+                <meta name="msapplication-TileColor" content="#2b5797" />
+                <meta
+                    name="msapplication-config"
+                    content="/favicons/browserconfig.xml"
+                />
+                <meta name="theme-color" content="#ffffff" />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-regular.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-bold.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/inter/inter-black.woff2"
+                    as="font"
+                    crossOrigin=""
+                />
+            </Head>
+            <div className={styles.container}>
+                <header className={styles.header}>
+                    <HeadingSlackCTA />
+                    <ThemeChanger />
+                </header>
+                <main className={styles.main}>
+                    <div className={styles.content}>{children}</div>
+                </main>
+                <footer className={styles.footer}>
+                    <FooterSlackCTA />
+                    <SubFooter lastPublishedAt={lastPublishedAt} />
+                </footer>
+            </div>
+        </>
+    );
+};
 
 export default Layout;
