@@ -2,7 +2,9 @@ import styles from './FooterSlackCTA.module.scss';
 
 export const FooterSlackCTA = () => (
     <div className={styles.container}>
-        <div className={styles.emoji}>👂</div>
+        <div className={styles.emoji} aria-hidden="true">
+            👂
+        </div>
         <div>
             <div className={styles.cta__text}>Hear the latest news…</div>
             <div className={styles.cta}>
