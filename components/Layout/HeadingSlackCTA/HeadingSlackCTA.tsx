@@ -4,7 +4,7 @@ import variables from '../../../styles/variables.module.scss';
 
 export const HeadingSlackCTA = () => (
     <div className={styles.container}>
-        <div className={styles.logo}>
+        <div className={styles.logo} aria-hidden="true">
             <SlackLogo color={variables.textColor} />
         </div>
         <div className={styles.cta}>
