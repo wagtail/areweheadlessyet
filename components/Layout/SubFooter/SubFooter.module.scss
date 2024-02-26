@@ -1,4 +1,4 @@
-.footer {
+.subfooter {
     padding: 3rem 5rem 1rem 0;
     position: relative;
     line-height: 1.5;
@@ -9,7 +9,8 @@
         align-self: flex-end;
         display: flex;
         align-items: center;
-        width: auto;
+        width: fit-content;
+        float: right;
     }
 
     .copyright {
