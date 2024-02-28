@@ -17,30 +17,24 @@ export const ThemeChanger = () => {
     const toggleTheme = () =>
         theme === 'light' ? setTheme('dark') : setTheme('light');
 
+    const lightClass = theme === 'light' ? styles.light : '';
+
     return (
         <div className={styles.container}>
-            <span
-                className={`${styles.switch_night} ${
-                    theme === 'light' && styles.light
-                }`}
-            >
+            <span className={`${styles.switch_night} ${lightClass}`}>
                 Night
             </span>
-            <label className={styles.switch}>
-                <input
-                    type="checkbox"
-                    onClick={toggleTheme}
-                    defaultChecked={theme === 'light'}
-                />
-                <span className={styles.slider} />
-            </label>
-            <span
-                className={`${styles.switch_day} ${
-                    theme === 'light' && styles.light
-                }`}
+            <button
+                onClick={toggleTheme}
+                className={styles.switch}
+                defaultChecked={theme === 'light'}
+                aria-label={`Switch to ${
+                    theme === 'light' ? 'dark' : 'light'
+                } mode`}
             >
-                Day
-            </span>
+                <span className={`${styles.switch_slider} ${lightClass}`} />
+            </button>
+            <span className={`${styles.switch_day} ${lightClass}`}>Day</span>
         </div>
     );
 };
