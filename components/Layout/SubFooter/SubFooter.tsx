@@ -1,14 +1,13 @@
 import Link from 'next/link';
-
 import { AreWeHeadlessYetLogo } from '../../SVG';
 import { getYear } from '../../../lib';
-import styles from './Footer.module.scss';
-import type FooterProps from './types';
+import styles from './SubFooter.module.scss';
+import type SubFooterProps from './types';
 import variables from '../../../styles/variables.module.scss';
 
-export const Footer = ({ lastPublishedAt }: FooterProps) => (
-    <footer className={styles.footer}>
-        <div className={styles.footer__text}>
+export const SubFooter = ({ lastPublishedAt }: SubFooterProps) => (
+    <div className={styles.subfooter}>
+        <div className={styles.subfooter__text}>
             <div>
                 <strong className={styles.copyright}>
                     © Are we headless yet?
@@ -30,7 +29,7 @@ export const Footer = ({ lastPublishedAt }: FooterProps) => (
                 </a>
             </Link>
         </div>
-    </footer>
+    </div>
 );
 
-export default Footer;
+export default SubFooter;
