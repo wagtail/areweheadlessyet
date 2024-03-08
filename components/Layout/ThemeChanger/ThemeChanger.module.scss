@@ -1,53 +1,48 @@
 .container {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 1rem;
     left: -1rem;
 
+    @media (forced-colors: active) {
+        display: none;
+    }
+
     .switch {
+        padding: 0;
+        width: 52px;
+        height: 28px;
+        border: 0;
+        overflow: hidden;
         position: relative;
-        display: inline-block;
-        width: 55px;
-        height: 30px;
+        border-radius: 14px;
+        background-color: var(--color--toggle-background);
+        transition: 0.4s ease-out;
+        cursor: pointer;
 
-        input {
-            /* Hide default HTML checkbox */
-            opacity: 0;
-            width: 0;
-            height: 0;
-
-            &:checked + .slider {
-                background-color: var(--color--toggle-background);
-
-                &:before {
-                    content: url('../../../public/images/smiling-sunglasses.png');
-                    -webkit-transform: translateX(26px);
-                    -ms-transform: translateX(26px);
-                    transform: translateX(26px);
-                }
-            }
-
-            &:focus + .slider {
-                box-shadow: 0 0 1px var(--color--toggle-background);
-            }
-        }
-
-        .slider {
-            position: absolute;
-            border-radius: 70px;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--color--toggle-background);
-            transition: 0.4s;
-
-            &:before {
+        .switch_slider {
+            &::before {
+                content: '';
+                inset-inline-end: 28px;
+                top: 4px;
+                width: 20px;
+                height: 20px;
+                display: block;
                 position: absolute;
-                content: url('../../../public/images/moon.png');
-                left: 4px;
-                bottom: 0;
-                transition: 0.4s;
+                border-radius: 12px;
+                box-shadow: inset 12px -8px 0 -5px var(--color--white);
+                transition: inset-inline-end 0.25s ease-out;
+            }
+
+            &.light {
+                &::before {
+                    content: '';
+                    inset-inline-end: 4px;
+                    transition: inset-inline-end 0.25s ease-out;
+                    box-shadow: unset;
+                    background-color: var(--color--white);
+                }
             }
         }
     }
