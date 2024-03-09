@@ -72,7 +72,7 @@ export async function getAreWeHeadlessYetTopicPages() {
         type: 'areweheadlessyet.AreWeHeadlessYetTopicPage',
         fields: '*',
     });
-    return <Topic[]>humps.camelizeKeys(response.items);
+    return humps.camelizeKeys(response.items) as Topic[];
 }
 
 /**

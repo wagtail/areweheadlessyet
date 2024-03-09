@@ -15,9 +15,7 @@ export const TopicPageHero = ({
     <div className={styles.hero}>
         <div className={styles.logo}>
             <Link href="/">
-                <a>
-                    <HeadlessBird color={variables.textColor} />
-                </a>
+                <HeadlessBird color={variables.textColor} />
             </Link>
         </div>
         <div className={styles.hero__content}>
@@ -25,7 +23,11 @@ export const TopicPageHero = ({
                 <Image
                     src={topicStatusImages[statusColor]}
                     alt=""
-                    layout="responsive"
+                    sizes="100vw"
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
             </div>
             <div className={styles.hero__body}>

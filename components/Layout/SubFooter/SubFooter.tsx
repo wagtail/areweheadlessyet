@@ -24,9 +24,7 @@ export const SubFooter = ({ lastPublishedAt }: SubFooterProps) => (
         </div>
         <div className={styles.logo}>
             <Link href="/">
-                <a>
-                    <AreWeHeadlessYetLogo color={variables.accentColor} />
-                </a>
+                <AreWeHeadlessYetLogo color={variables.accentColor} />
             </Link>
         </div>
     </div>
