@@ -13,7 +13,7 @@ const Home: NextPage<{ page: AreWeHeadlessYetHomePage; topics: Topics }> = ({
     topics,
 }) => (
     <Layout
-        title="Are we headless yet? | Wagtail"
+        title="Are we headless yet? Yes! | Wagtail"
         lastPublishedAt={page.lastPublishedAt}
     >
         <HomeHero icon={page.straplineIcon} text={page.straplineText} />
