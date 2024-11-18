@@ -1,4 +1,4 @@
-# Are we headless yet?
+# Are we headless yet? Yes!
 
 This is the source code to [Wagtail’s Are we headless yet? website](https://areweheadlessyet.wagtail.org) frontend built with [Next.js](https://nextjs.org/).
 
