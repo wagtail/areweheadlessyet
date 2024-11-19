@@ -1,3 +1,4 @@
+"use client"
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import styles from './ThemeChanger.module.scss';
@@ -28,9 +29,8 @@ export const ThemeChanger = () => {
                 onClick={toggleTheme}
                 className={styles.switch}
                 defaultChecked={theme === 'light'}
-                aria-label={`Switch to ${
-                    theme === 'light' ? 'dark' : 'light'
-                } mode`}
+                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'
+                    } mode`}
             >
                 <span className={`${styles.switch_slider} ${lightClass}`} />
             </button>

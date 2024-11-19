@@ -1,5 +1,6 @@
 import humps from 'humps';
 import type { Topic } from '../components/StreamField/blocks/TopicsBlock';
+import { AreWeHeadlessYetTopicPage } from '../components/types';
 
 /**
  * Helper to fetch data from Wagtail's API.
@@ -18,7 +19,7 @@ async function fetchHelper(path: string, params: { [key: string]: string }) {
     }
     const response = await fetch(
         `${process.env.BASE_URL}api/v2/pages/${path}?` +
-            new URLSearchParams(params),
+        new URLSearchParams(params),
         { headers: headers },
     );
 
@@ -90,5 +91,5 @@ export async function getAreWeHeadlessYetTopicPage(slug: string) {
     if (items.length === 0) {
         throw new Error(`Failed to fetch the ${slug} topic page.`);
     }
-    return humps.camelizeKeys(items[0]);
+    return humps.camelizeKeys(items[0]) as AreWeHeadlessYetTopicPage;
 }
