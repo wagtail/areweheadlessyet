@@ -1,10 +1,10 @@
 # Are we headless yet? Yes!
 
-This website is now deprecated. Headless support has evolved a lot over the years, and documentation on important features and known gaps is now available in the developer documentation, in the [Headless support](https://docs.wagtail.org/en/latest/advanced_topics/headless.html) page.
+This website is now deprecated. Headless support has evolved a lot over the years, and documentation on important features and known gaps is now available in the developer documentation, in the [Headless support](https://docs.wagtail.org/en/latest/advanced_topics/headless.html) page. See also the [wagtail.org Headless](https://wagtail.org/headless/) information page.
 
 ![Screenshot of the Are we headless yet? Yes! Homepage](./homepage-screenshot.webp)
 
-This is the source code to [Wagtail’s Are we headless yet? website](https://areweheadlessyet.wagtail.org) frontend built with [Next.js](https://nextjs.org/).
+This is the source code to Wagtail’s Are we headless yet? website frontend built with [Next.js](https://nextjs.org/).
 
 The backend is available on the [Wagtail's website source code](https://github.com/wagtail/wagtail.org/tree/main/wagtailio/areweheadlessyet).
 
