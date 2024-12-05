@@ -1,5 +1,7 @@
 # Are we headless yet? Yes!
 
+This website is now deprecated. Headless support has evolved a lot over the years, and documentation on important features and known gaps is now available in the developer documentation, in the [Headless support](https://docs.wagtail.org/en/latest/advanced_topics/headless.html) page.
+
 ![Screenshot of the Are we headless yet? Yes! Homepage](./homepage-screenshot.webp)
 
 This is the source code to [Wagtail’s Are we headless yet? website](https://areweheadlessyet.wagtail.org) frontend built with [Next.js](https://nextjs.org/).
@@ -33,5 +35,14 @@ Vercel also provides a preview link whenever a new branch is pushed or modified.
 [MIT](https://github.com/wagtail/areweheadlessyet/blob/main/LICENSE)
 
 ## Thanks
+
+This website was built by:
+
+- Tidiane Dia ([@Tijani-Dia](https://github.com/Tijani-Dia))
+- Thibaud Colas ([@thibaudcolas](https://github.com/thibaudcolas))
+- James Hancock ([@jhancock532](https://github.com/jhancock532))
+- Sherry ([@shyusu4](https://github.com/shyusu4))
+
+Thank you to Sævar Öfjörð Magnússon and Alex Fulcher who helped move this website’s contents to the [Headless support](https://docs.wagtail.org/en/latest/advanced_topics/headless.html) documentation page as part of [Wagtail Space NL 2024](https://www.fourdigits.nl/blog/wagtail-space-nl-2024-recap-productive-and-fun/). Thank you to everyone who responded to the [2022 Wagtail headless survey](https://github.com/wagtail/wagtail/discussions/12664) to create this website.
 
 [![Powered by Vercel](https://raw.githubusercontent.com/wagtail/areweheadlessyet/main/.github/powered-by-vercel.svg?sanitize=true)](https://vercel.com/?utm_source=wagtail&utm_campaign=oss)
