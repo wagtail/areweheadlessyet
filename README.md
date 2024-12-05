@@ -1,5 +1,7 @@
 # Are we headless yet? Yes!
 
+![Screenshot of the Are we headless yet? Yes! Homepage](./homepage-screenshot.webp)
+
 This is the source code to [Wagtail’s Are we headless yet? website](https://areweheadlessyet.wagtail.org) frontend built with [Next.js](https://nextjs.org/).
 
 The backend is available on the [Wagtail's website source code](https://github.com/wagtail/wagtail.org/tree/main/wagtailio/areweheadlessyet).
