@@ -12,7 +12,11 @@ import TopicPageHero from '../components/TopicPageHero/TopicPageHero';
 import StreamField from '../components/StreamField';
 
 const TopicPage: NextPage<{ page: AreWeHeadlessYetTopicPage }> = ({ page }) => (
-    <Layout title={page.title} lastPublishedAt={page.lastPublishedAt}>
+    <Layout
+        title={page.title}
+        meta={page.meta}
+        lastPublishedAt={page.lastPublishedAt}
+    >
         <TopicPageHero {...page} />
         <StreamField body={page.body} className="container--topic-page" />
     </Layout>
